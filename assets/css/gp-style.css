@@ -14,6 +14,7 @@ form {
     padding-bottom: calc(100% * .42);
  }
 
+
 #stats-found {
 	height: 60px;
 	width: 300px;
@@ -21,7 +22,7 @@ form {
 	left: 50%;
 	top: 50%;
     margin: 160px 0 0 60px;
-    text-align: right;
+    text-align: right;s
    	text-decoration: none;
    	transition: 0.6s ease-in-out;
 }
@@ -50,158 +51,6 @@ form {
     margin: 210px 0 0 60px;
     transition: 0.6s ease-in-out;
 }    
-
-#region-north-america {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	margin: -30px 0 0  -390px;
-	left: 50%;
-	top: 50%;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-}
-
-#region-north-america:hover {
-	background-position: 0 100%;
-	}
-
-#region-south-america {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	left: 50%;
-	top: 50%;
-    margin: 130px 0 0  -260px;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-}
-
-#region-south-america:hover {
-	background-position: 0 100%;
-	}
-
-#region-asia {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	left: 50%;
-	top: 50%;
-    margin: -50px 0 0  220px;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-}
-
-#region-asia:hover {
-	background-position: 0 100%;
-	}
-
-#region-africa {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	left: 50%;
-	top: 50%;
-  margin: 80px 0 0  -50px;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-
-}
-
-#region-africa:hover {
-	background-position: 0 100%;
-	}
-
-
-#region-australia {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	left: 50%;
-	top: 50%;
-    margin: 160px 0 0  247px;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-}
-
-#region-australia:hover {
-	background-position: 0 100%;
-	}
-
-#region-europe {
-    height: calc(100% * .04);
-    width: calc(100% * .04);
-    padding: 0;
-    padding-bottom: calc(100% * .04);
-    background-size: cover;
-    border-radius: 40px;
-    
-	position:absolute;
-	background-image: url('../images/button_hover.svg');
-	background-repeat: no-repeat;
-	left: 50%;
-	top: 50%;
-    margin: -50px 0 0  -30px;
-	text-align:center;
-	line-height:56px;
-  font-size: 2.5em;
- 	color: white;  
-	cursor: pointer;
-}
-
-#region-europe:hover {
-	background-position: 0 100%;
-}
 
 /*-- floating boxes - */
 .floating-box {
@@ -388,3 +237,54 @@ form {
 
 
 /*--single Product overlay - END*/
+
+
+/*--test map--*/
+
+.map {
+  margin:10px;
+  position: relative;
+  display: inline-block;
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+
+.box {
+   width:15%;
+  height:15%;
+	background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+	background-image: url('../images/marker.png');
+	cursor: pointer;
+}
+
+#region-north-america {
+  top:20%;
+  left:4%;
+}
+#region-south-america {
+  top:55%;
+  left:15%;
+}
+#region-asia {
+  top:20%;
+  left:70%;
+}
+#region-africa {
+  top:45%;
+  left:43%;
+}
+#region-australia {
+  top:70%;
+  left:78%;
+}
+#region-europe {
+  top:13%;
+  left:45%;
+}
+
