@@ -1,0 +1,1 @@
+<div id="leftcolumn-top"></div><div id="leftcolumn-bottom">		<?php		echo buildFilter ( 'region', 'region_id' );		echo buildFilter ( 'format', 'format_id' );		echo buildFilter ( 'brand', 'brand_id' );		echo buildFilter ( 'size', 'size_id' );		echo buildFilter ( 'finish', 'finish_id' );		?></div><div id="leftcolumn-filler">
