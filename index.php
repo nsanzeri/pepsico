@@ -6,7 +6,7 @@ require_once 'filter.fn.php';
 require_once 'product.fn.php';
 
 // Includes
-require_once 'connect.inc.php';
+require_once 'connect-local.inc.php';
 require_once 'get-variables.inc.php';
 require_once 'head.inc.php';
 ?>
