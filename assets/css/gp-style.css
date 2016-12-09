@@ -186,6 +186,7 @@ a:hover {
     text-align: center;
     font-size: .9em;
     color: black;
+    display: none;
 }
 
 .productId-modal{
@@ -208,8 +209,8 @@ a:hover {
 }
 
 
-.gp-modal {
-	z-index: 3;
+#region-dialog {
+	z-index: 1050;
 	display: none;
 	padding-top: 100px;
 	position: fixed;
@@ -346,5 +347,9 @@ a:hover {
 #region-europe {
   top:13%;
   left:45%;
+}
+
+.modal-content {
+  position: absolute;
 }
 

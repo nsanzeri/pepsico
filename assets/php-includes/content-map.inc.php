@@ -10,15 +10,10 @@
 				<p class="panel-title"></p>
 			</div>
 			<div class="panel-body">
-
-
-
 				<div class="map">
 					<img src="assets/images/map-blue.png" alt="Map">
 					<?php echo getRegionCounts(); ?>
 				</div>
-
-
 			</div>
 		</div>
 	</div>

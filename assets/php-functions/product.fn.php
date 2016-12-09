@@ -10,22 +10,22 @@ function selectAllProducts() {	global $db;	$sql = "SELECT products.name AS p
 			$name = $row->name;
 			$regionId = $row->region_id;
 			if ($name == "Africa") {
-				$output .= '<div id="region-africa" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-africa" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 			if ($name == "North America") {
-				$output .= '<div id="region-north-america" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-north-america" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 			if ($name == "South America") {
-				$output .= '<div id="region-south-america" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-south-america" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 			if ($name == "Australia") {
-				$output .= '<div id="region-australia" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-australia" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 			if ($name == "Asia") {
-				$output .= '<div id="region-asia" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-asia" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 			if ($name == "Europe") {
-				$output .= '<div id="region-europe" class="box">' . getRegionCount ( $regionId ) . '</div>';
+				$output .= '<div id="region-europe" ' . getStylingClasses(). '>' . getRegionCount ( $regionId ) . '</div>';
 			}
 		}
 	} else {
@@ -38,24 +38,24 @@ function selectAllProducts() {	global $db;	$sql = "SELECT products.name AS p
 				$name = $row->name;
 			}
 			if ($name == "Africa" && $count > 0) {
-				$output .= '<div id="region-africa" class="box">' . $count . '</div>';
+				$output .= '<div id="region-africa"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 			if ($name == "North America" && $count > 0) {
-				$output .= '<div id="region-north-america" class="box">' . $count . '</div>';
+				$output .= '<div id="region-north-america"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 			if ($name == "South America" && $count > 0) {
-				$output .= '<div id="region-south-america" class="box">' . $count . '</div>';
+				$output .= '<div id="region-south-america"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 			if ($name == "Australia" && $count > 0) {
-				$output .= '<div id="region-australia" class="box">' . $count . '</div>';
+				$output .= '<div id="region-australia"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 			if ($name == "Asia" && $count > 0) {
-				$output .= '<div id="region-asia" class="box">' . $count . '</div>';
+				$output .= '<div id="region-asia"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 			if ($name == "Europe" && $count > 0) {
-				$output .= '<div id="region-europe" class="box">' . $count . '</div>';
+				$output .= '<div id="region-europe"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 		}
 	}
 	return $output;
-}function isAllCriteriaEmpty() {	global $db, $page, $region, $format, $brand, $size, $finish;	$output = "";	$empty = true;	if (!functionallyEmpty($region)){$empty = false;}	if (!functionallyEmpty($format)){$empty = false;}	if (!functionallyEmpty($brand)){$empty = false;}	if (!functionallyEmpty($size)){$empty = false;}	if (!functionallyEmpty($finish)){$empty = false;}	if (" | " == substr($output, 0, 3)){$empty = false;}	return $empty;}function getRegionCount($id) {	global $db, $page, $region, $format, $brand, $size, $finish;	$sql = "SELECT COUNT(*)  AS total FROM `products`";	// 	where `" . $idName . "` in (" . $id . ")";	$sqlOperator = " WHERE ";	$sql .= $sqlOperator . " region_id = " . $id;	$result = $db -> query($sql);	$res = mysqli_fetch_assoc($result);//fetch data	return $res['total'];}function prepareCriteriaSql(){	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,			region.name AS regionName, format.name AS formatName, brand.name AS brandName,			size.name AS sizeName, finish.name  AS finishName FROM products			INNER JOIN region ON products.region_id = region.region_id			INNER JOIN format ON products.format_id = format.format_id			INNER JOIN brand ON products.brand_id = brand.brand_id			INNER JOIN size ON products.size_id = size.size_id			INNER JOIN finish ON products.finish_id = finish.finish_id ";	$sqlOperator = " WHERE ";	if (!functionallyEmpty($region)){		$sql .= $sqlOperator . "products.region_id IN (" . buildInString($region) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($format)){		$sql .= $sqlOperator . "products.format_id IN (" . buildInString($format) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($brand)){		$sql .= $sqlOperator . " products.brand_id IN (" . buildInString($brand) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($size)){		$sql .= $sqlOperator . " products.size_id IN (" . buildInString($size) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($finish)){		$sql .= $sqlOperator . " products.finish_id IN (" . buildInString($finish) . " 0)";		$sqlOperator = " AND ";	}	$sql .= '  ORDER BY regionName ASC, formatName ASC, brandName ASC, sizeName ASC, finishName ASC';	return $sql;}?>
+}function getStylingClasses(){	return 'class="box waves-effect waves-light" data-toggle="modal" data-target="region-dialog"';}function isAllCriteriaEmpty() {	global $db, $page, $region, $format, $brand, $size, $finish;	$output = "";	$empty = true;	if (!functionallyEmpty($region)){$empty = false;}	if (!functionallyEmpty($format)){$empty = false;}	if (!functionallyEmpty($brand)){$empty = false;}	if (!functionallyEmpty($size)){$empty = false;}	if (!functionallyEmpty($finish)){$empty = false;}	if (" | " == substr($output, 0, 3)){$empty = false;}	return $empty;}function getRegionCount($id) {	global $db, $page, $region, $format, $brand, $size, $finish;	$sql = "SELECT COUNT(*)  AS total FROM `products`";	// 	where `" . $idName . "` in (" . $id . ")";	$sqlOperator = " WHERE ";	$sql .= $sqlOperator . " region_id = " . $id;	$result = $db -> query($sql);	$res = mysqli_fetch_assoc($result);//fetch data	return $res['total'];}function prepareCriteriaSql(){	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,			region.name AS regionName, format.name AS formatName, brand.name AS brandName,			size.name AS sizeName, finish.name  AS finishName FROM products			INNER JOIN region ON products.region_id = region.region_id			INNER JOIN format ON products.format_id = format.format_id			INNER JOIN brand ON products.brand_id = brand.brand_id			INNER JOIN size ON products.size_id = size.size_id			INNER JOIN finish ON products.finish_id = finish.finish_id ";	$sqlOperator = " WHERE ";	if (!functionallyEmpty($region)){		$sql .= $sqlOperator . "products.region_id IN (" . buildInString($region) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($format)){		$sql .= $sqlOperator . "products.format_id IN (" . buildInString($format) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($brand)){		$sql .= $sqlOperator . " products.brand_id IN (" . buildInString($brand) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($size)){		$sql .= $sqlOperator . " products.size_id IN (" . buildInString($size) . " 0)";		$sqlOperator = " AND ";	}	if (!functionallyEmpty($finish)){		$sql .= $sqlOperator . " products.finish_id IN (" . buildInString($finish) . " 0)";		$sqlOperator = " AND ";	}	$sql .= '  ORDER BY regionName ASC, formatName ASC, brandName ASC, sizeName ASC, finishName ASC';	return $sql;}?>
