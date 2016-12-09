@@ -251,7 +251,7 @@ a:hover {
     background-color: #00a9e2!important;
 }
 
-.gp-closebtn {
+/* .gp-closebtn {
     text-decoration: none;
     float: right;
     font-size:  1.9em;
@@ -267,7 +267,7 @@ a:hover {
     font-weight: bold;
     color: inherit;
 }
-
+ */
 .gp-clearall {
     text-decoration: none;
     float: right;
