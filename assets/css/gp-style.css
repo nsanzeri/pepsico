@@ -171,6 +171,7 @@ a:hover {
 .floating-box-sp {
     text-align: left;
     position: relative;
+    width: 95%;
 }
 
 /*--gallery floating boxes - END */
@@ -203,7 +204,7 @@ a:hover {
     position: absolute;
     margin: 0px 0 0 0px;
     overflow: auto;
-    display: none;
+    opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -213,7 +214,7 @@ a:hover {
     position: absolute;
     margin: 0px 0 0 0px;
     overflow: auto;
-    display: none;
+    opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
 

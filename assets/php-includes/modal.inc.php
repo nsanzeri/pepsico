@@ -1,5 +1,5 @@
 
-<div id="region-dialog" class="modal fade">
+<div id="region-dialog" class="modal">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -35,7 +35,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close product-closebtn" data-dismiss="modal" aria-hidden="true">x</button>
+				<button type="button" class="close product-closebtn" aria-hidden="true">x</button>
 				<h4 class="modal-title" id="gp-modal-product-label">
 
 				</h4>
