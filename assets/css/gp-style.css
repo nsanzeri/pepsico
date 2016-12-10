@@ -143,6 +143,12 @@ a:hover {
 
 }
 
+.floating-box-text-sp {
+  /* display: inline-block; */
+  display: block;
+  height: 20px;
+}
+
 .floating-box-image {
     width: 73px;
     height: 75px;
@@ -163,15 +169,8 @@ a:hover {
 }
 
 .floating-box-sp {
-    display: inline-block;
-    width: 75px;
-    position: absolute;
-    height: -95px;
-    /* margin: 10px; */
-    /* position: relative; */
     text-align: left;
-    /* margin-bottom: 300px; */
-    margin-top: 30px;
+    position: relative;
 }
 
 /*--gallery floating boxes - END */

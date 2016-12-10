@@ -11,7 +11,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])
 	require_once '../php-includes/get-variables.inc.php';
 
 	$output = getSingleProduct($prodId);
-	echo $output;
+	echo json_encode($output);
 }
 
 ?>
