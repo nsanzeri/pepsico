@@ -2,9 +2,12 @@
 <div id="region-dialog" class="modal">
 	<div class="modal-dialog">
 		<div class="modal-content">
+			<div class="modal-footer">
+				<button type="button"
+					class="btn btn-default waves-effect gp-closebtn"
+					data-dismiss="modal">Close</button>
+			</div>
 			<div class="modal-header">
-
-				<button type="button" class="close gp-closebtn" aria-hidden="true">x</button>
 				<h4 class="modal-title" id="myModalLabel">
 					<?php
 					$source_str = '';
@@ -18,11 +21,6 @@
 			<div class="modal-body">
 				<div id="gp-modal-products"></div>
 			</div>
-			<div class="modal-footer">
-				<button type="button"
-					class="btn btn-default waves-effect gp-closebtn"
-					data-dismiss="modal">Close</button>
-			</div>
 		</div>
 		<!-- /.modal-content -->
 	</div>
@@ -34,19 +32,19 @@
 <div id="product-dialog" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close product-closebtn" aria-hidden="true">x</button>
-				<h4 class="modal-title" id="gp-modal-product-label">
-
-				</h4>
+			<div class="modal-footer">
+			<button type="button"
+					class="btn btn-default waves-effect product-closebtn" data-dismiss="modal">Close</button>
 			</div>
 			<div class="modal-body">
 				<div id="gp-modal-product"></div>
 			</div>
-			<div class="modal-footer">
-				<button type="button"
-					class="btn btn-default waves-effect product-closebtn" data-dismiss="modal">Close</button>
+			<div class="modal-header">
+				<h4 class="modal-title" id="gp-modal-product-label">
+
+				</h4>
 			</div>
+				
 		</div>
 		<!-- /.modal-content -->
 	</div>

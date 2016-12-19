@@ -197,6 +197,8 @@ a:focus {
 .col-xs-9 {
   padding-left: 10px;
   padding-right: 10px;
+  width:100%;
+  text-align:center;
 }
 .breadcrumb {
   background-color: transparent;
@@ -507,20 +509,26 @@ a:focus {
   margin-right: 6px;
   text-shadow: none;
 }
-.modal .modal-dialog .modal-content {
+
+
+
+
+/*.modal .modal-dialog .modal-content {
   border-radius: 2px;
   padding: 20px 20px 0 20px;
-}
-.modal .modal-dialog .modal-content .modal-header {
+}*/
+.modal /*.modal-dialog.modal-content*/ .modal-header {
   border-bottom-width: 2px;
   margin: 0;
   padding: 0 0 10px 0;
 }
-.modal .modal-dialog .modal-content .modal-body {
-  padding: 10px 0;
+.modal /*.modal-dialog .modal-content*/ .modal-body {
+  padding: 0px 0;
+  background-color:#f2f2f2;
+
 }
-.modal .modal-dialog .modal-content .modal-footer {
-  padding-top: 15px;
+.modal /*.modal-dialog .modal-content*/ .modal-footer {
+  padding-top: 0px;
 }
 .modal-full {
   width: 98%;
@@ -906,7 +914,7 @@ a:focus {
   -o-transform: translateZ(0);
   transform: translateZ(0);
   text-align: center;
-  width: 2.5em;
+  width: 1em;
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
@@ -1365,8 +1373,8 @@ File: Components
   border: 1px solid #0398db !important;
 }
 .btn-success {
-  background-color: #01ba9a !important;
-  border: 1px solid #01ba9a !important;
+  background-color: #03a9f4 !important;
+  border: 1px solid #03a9f4 !important;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -1377,8 +1385,8 @@ File: Components
 .btn-success:focus,
 .btn-success:hover,
 .open > .dropdown-toggle.btn-success {
-  background-color: #01a185 !important;
-  border: 1px solid #01a185 !important;
+  background-color: #0090d1 !important;
+  border: 1px solid #03a9f4 !important;
 }
 .btn-info {
   background-color: #18bae2 !important;
@@ -1477,6 +1485,7 @@ File: Components
   border: none;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 0px;
+  background-color:#f2f2f2;
 }
 .panel .panel-body {
   padding-top: 4em;
@@ -3468,6 +3477,11 @@ body.fixed-left .side-menu.left {
   padding: 10px 20px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
+
+.page-header-title a {
+  color:#03a9f4;
+}
+
 .page-header-title .breadcrumb {
   margin-bottom: 0;
   display: inline-block;
