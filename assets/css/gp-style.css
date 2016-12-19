@@ -58,7 +58,7 @@ form {
 		background-color:#fff;
     width: 200px;
     height: 200px;
-    margin: 40px;
+    margin: 20px;
 		position: relative;
 		padding:50px;
 		text-align:center;
@@ -162,8 +162,8 @@ a:hover {
 }
 
 .floating-box-vr360 {
-    height:440px;
-    width:340px;
+    height:450px;
+    width:300px;
     margin: 10px;
     display: inline-block;
 }
@@ -199,11 +199,10 @@ a:hover {
 
 
 #region-dialog {
-    height: 900px;
+    height: 100%;
     width: 100%;
     position: absolute;
     margin: 0px 0 0 0px;
-    overflow: auto;
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -212,10 +211,11 @@ a:hover {
     height: 900px;
     width: 100%;
     position: absolute;
-    margin: 0px 0 0 0px;
+    margin: 0px auto;
     overflow: auto;
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .gp-modal a {
@@ -228,7 +228,15 @@ a:hover {
 	position: relative;
 	padding: 0;
 	outline: 0;
-	width: 600px
+	width: 600px;
+	overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#gp-modal-products {
+	margin: 0 auto;
+  text-align: center;
+	
 }
 
 .gp-container {
@@ -314,9 +322,9 @@ a:hover {
 	background-image: url('../images/marker.png');
 	cursor: pointer;
 	color: white;
-    font-size: 1.9em;
-    text-align: center;
-    line-height: 65px;
+  font-size: 1.9em;
+  text-align: center;
+  line-height: 65px;
 }
 
 #region-north-america {
@@ -344,7 +352,5 @@ a:hover {
   left:45%;
 }
 
-.modal-content {
-  position: absolute;
-}
+
 
