@@ -66,7 +66,7 @@ function getSingleProduct($prodId) {
 
 	$keys = array('image360', 'header');
 	$output = array_fill_keys($keys, '');
-	
+
 
 	while ($row = $result -> fetch_object()) {
 		$productId = $row ->productId;
@@ -78,15 +78,15 @@ function getSingleProduct($prodId) {
 		$brandName = $row -> brandName;
 		$sizeName = $row -> sizeName;
 		$finishName = $row -> finishName;
-		
+
 		$output['image360'] .= "<div class='floating-box-vr360'>
-								<div id='container' style='height: 450px; width: 300px;'>
-			</div>
-			<script type='text/javascript'>
-				getProductSpinnerConfig( $productId );
-			</script>
-			</div>";
-		
+		<div id='container' style='height: 450px; width: 300px;'>
+		</div>
+		<script type='text/javascript'>
+		getProductSpinnerConfig( $productId );
+		</script>
+		</div>";
+
 		$output['header'] .= "<div class='floating-box-sp'>
 		<div class='floating-box-text-sp'> $productName  </div>
 		<div class='floating-box-text-sp'> $regionName  </div>
@@ -145,13 +145,13 @@ function getProductsMatchingCriteria() {
 	global $db, $page, $region, $format, $brand, $size, $finish;
 	$sql = prepareCriteriaSql();
 	$output = "";
-// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
-// 		$output .= "NO CRITERIA SELECTED</div>";
-// 	}else{
-		$result = $db -> query($sql);
+	// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
+	// 		$output .= "NO CRITERIA SELECTED</div>";
+	// 	}else{
+	$result = $db -> query($sql);
 
-		
-		$output .= '<thead>
+
+	$output .= '<thead>
 			<tr>
 				<th>Image</th>
 				<th>Region</th>
@@ -160,35 +160,34 @@ function getProductsMatchingCriteria() {
 				<th>Size</th>
 				<th>Finish</th>
 			</tr>
-		</thead> 
+		</thead>
 		<tbody>';
-		
-		
-		
-		$output .= "<div class='panel'>";
-		while ($row = $result -> fetch_object()) {
-			$productId = $row -> productId;
-			$productName = $row -> productName;
-			$imagePath = $row -> imagePath;
-			$imageName = $row -> imageName;
-			$regionName = $row -> regionName;
-			$formatName = $row -> formatName;
-			$brandName = $row -> brandName;
-			$sizeName = $row -> sizeName;
-			$finishName = $row -> finishName;
-				
-			$output .= "<tr>";
-<<<<<<< HEAD
-			$output .= "<td><div class='productId-modal'>". $productId . "</div><a href='#' class='gp-modal-product-id'><img  class='data-image' src='" . $imagePath . "/" . $imageName . "'></a></td>
-			<td>$regionName</td>
-			<td>$formatName</td>
-			<td>$brandName</td>
-			<td>$sizeName</td>
-			<td>$finishName</td>
-			</tr>";
-		}
-		$output .= "</tbody>";
-// 	}
+
+
+
+	$output .= "<div class='panel'>";
+	while ($row = $result -> fetch_object()) {
+		$productId = $row -> productId;
+		$productName = $row -> productName;
+		$imagePath = $row -> imagePath;
+		$imageName = $row -> imageName;
+		$regionName = $row -> regionName;
+		$formatName = $row -> formatName;
+		$brandName = $row -> brandName;
+		$sizeName = $row -> sizeName;
+		$finishName = $row -> finishName;
+
+		$output .= "<tr>";
+		$output .= "<td><div class='productId-modal'>". $productId . "</div><a href='#' class='gp-modal-product-id'><img  class='data-image' src='" . $imagePath . "/" . $productId . '/' .  $imageName . "'></a></td>
+		<td>$regionName</td>
+		<td>$formatName</td>
+		<td>$brandName</td>
+		<td>$sizeName</td>
+		<td>$finishName</td>
+		</tr>";
+	}
+	$output .= "</tbody>";
+	// 	}
 	return $output;
 }
 
@@ -196,66 +195,11 @@ function getProductsForGallery() {
 	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
 	$output = "";
 	$sql = prepareCriteriaSql();
-// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
-// 		$output .= "NO CRITERIA SELECTED</div>";
-// 	}else{
-		$result = $db -> query($sql);
-		$output = "";
-		
-		$output = '';
-		while ($row = $result -> fetch_object()) {
-			$productId = $row -> productId;
-			$productName = $row -> productName;
-			$imagePath = $row -> imagePath;
-			$imageName = $row -> imageName;
-			$regionName = $row -> regionName;
-			$formatName = $row -> formatName;
-			$brandName = $row -> brandName;
-			$sizeName = $row -> sizeName;
-			$finishName = $row -> finishName;
-			$output .= '<div class="floating-box rounded">';
-			$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $imageName . '></a></div>';
-			$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
-			$output .= '</div>';
-// 		}
-	}
-	return $output;
-
-}
-
-function getProductsMatchingRegion($regionName) {
-	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
-	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
-			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
-			INNER JOIN region ON products.region_id = region.region_id
-			INNER JOIN format ON products.format_id = format.format_id
-			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id";
-
-	// 	where `" . $idName . "` in (" . $id . ")";
-	$sql .= " WHERE region.name = '" . $regionName . "'";
-
-	if (!functionallyEmpty($format)){
-		$sql .= " AND products.format_id IN (" . buildInString($format) . " 0)";
-	}
-
-	if (!functionallyEmpty($brand)){
-		$sql .= " AND products.brand_id IN (" . buildInString($brand) . " 0)";
-	}
-
-	if (!functionallyEmpty($size)){
-		$sql .= " AND products.size_id IN (" . buildInString($size) . " 0)";
-	}
-
-	if (!functionallyEmpty($finish)){
-		$sql .= " AND products.finish_id IN (" . buildInString($finish) . " 0)";
-	}
-
+	// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
+	// 		$output .= "NO CRITERIA SELECTED</div>";
+	// 	}else{
 	$result = $db -> query($sql);
-// 	$numrows = $result -> num_rows;
-// 	echo $sql;
+	$output = "";
 
 	$output = '';
 	while ($row = $result -> fetch_object()) {
@@ -269,47 +213,10 @@ function getProductsMatchingRegion($regionName) {
 		$sizeName = $row -> sizeName;
 		$finishName = $row -> finishName;
 		$output .= '<div class="floating-box rounded">';
-		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $imageName . '></a></div>';
-=======
-			$output .= "<td><div class='productId-modal'>". $productId . "</div><a href='#' class='gp-modal-product-id'><img  class='data-image' src='" . $imagePath . "/" . $productId . '/' .  $imageName . "'></a></td>
-			<td>$regionName</td>
-			<td>$formatName</td>
-			<td>$brandName</td>
-			<td>$sizeName</td>
-			<td>$finishName</td>
-			</tr>";
-		}
-		$output .= "</tbody>";
-// 	}
-	return $output;
-}
-
-function getProductsForGallery() {
-	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
-	$output = "";
-	$sql = prepareCriteriaSql();
-// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
-// 		$output .= "NO CRITERIA SELECTED</div>";
-// 	}else{
-		$result = $db -> query($sql);
-		$output = "";
-		
-		$output = '';
-		while ($row = $result -> fetch_object()) {
-			$productId = $row -> productId;
-			$productName = $row -> productName;
-			$imagePath = $row -> imagePath;
-			$imageName = $row -> imageName;
-			$regionName = $row -> regionName;
-			$formatName = $row -> formatName;
-			$brandName = $row -> brandName;
-			$sizeName = $row -> sizeName;
-			$finishName = $row -> finishName;
-			$output .= '<div class="floating-box rounded">';
-			$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/'. $imageName . '></a></div>';
-			$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
-			$output .= '</div>';
-// 		}
+		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/'. $imageName . '></a></div>';
+		$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
+		$output .= '</div>';
+		// 		}
 	}
 	return $output;
 
@@ -346,8 +253,8 @@ function getProductsMatchingRegion($regionName) {
 	}
 
 	$result = $db -> query($sql);
-// 	$numrows = $result -> num_rows;
-// 	echo $sql;
+	// 	$numrows = $result -> num_rows;
+	// 	echo $sql;
 
 	$output = '';
 	while ($row = $result -> fetch_object()) {
@@ -362,12 +269,11 @@ function getProductsMatchingRegion($regionName) {
 		$finishName = $row -> finishName;
 		$output .= '<div class="floating-box rounded">';
 		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/' . $imageName . '></a></div>';
->>>>>>> branch 'master' of https://github.com/nsanzeri/pepsico
 		$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
 		$output .= '</div>';
 	}
 	return $output;
-	
+
 }
 
 function getProductCount() {
@@ -408,7 +314,7 @@ function getProductCount() {
 		}else{
 			$output .= " RESULTS : ";
 		}
-// 		$output .= "</div><br>	<div id='stats-current-search-label'>CURRENT SEARCH:</div>";
+		// 		$output .= "</div><br>	<div id='stats-current-search-label'>CURRENT SEARCH:</div>";
 	}
 	return $output;
 }
@@ -443,9 +349,9 @@ function getProductSearchCriteria() {
 		$sql = "SELECT name FROM finish WHERE finish_id IN (" . buildInString($finish) . " 0)";
 		$output .= buildCriteria($sql);
 	}
- 	if (" | " == substr($output, 0, 3)){
+	if (" | " == substr($output, 0, 3)){
 		$output = substr($output, 2);
- 	}
+	}
 	return $output;
 }
 
@@ -464,7 +370,7 @@ function buildCriteria($sql) {
 function getRegionCounts() {
 	$output = "";
 	global $db, $region;
-	
+
 	if (isAllCriteriaEmpty ()) {
 		$sql = "SELECT region_id, name FROM region";
 		$result = $db->query ( $sql );
@@ -563,7 +469,7 @@ function prepareCriteriaSql(){
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
 			INNER JOIN size ON products.size_id = size.size_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			INNER JOIN finish ON products.finish_id = finish.finish_id
 			WHERE products.is_active = 1 ";
 
 	if (!functionallyEmpty($region)){
@@ -590,4 +496,3 @@ function prepareCriteriaSql(){
 }
 
 ?>
-
