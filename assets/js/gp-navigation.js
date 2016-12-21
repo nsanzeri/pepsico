@@ -165,6 +165,7 @@ $(document).ready(function(){
    	   });
    }
    
+<<<<<<< HEAD
    function testAppend360(){
 		$spinner = '<img src="images/mini/001.jpg" width="400" height="400" class="reel" id="image"'+
 			'data-images="images/mini/###.jpg" data-frames="20" data-frame="14"'+
@@ -200,6 +201,20 @@ function getProductSpinnerConfig($prodId){
 	str='<?xml version="1.0" encoding="UTF-8"?>';
 	str+='<vrobject>';
 	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
+=======
+   function hideUrlBar(){}
+});
+function hideUrlBar(){}
+function getProductSpinnerConfig($prodId){
+	// create the object player with the container
+	obj=new object2vrPlayer("container");
+	// add the skin object
+	skin=new object2vrSkin(obj);
+	// load the configuration
+	str='<?xml version="1.0" encoding="UTF-8"?>';
+	str+='<vrobject>';
+	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
+>>>>>>> branch 'master' of https://github.com/nsanzeri/pepsico
 	str+='  <control simulatemass="1" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="0" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="1.000" controller="1" sensitivity="10"/>';
 	str+='  <view>';
 	str+='    <start row="0" column="0" state="0"/>';
