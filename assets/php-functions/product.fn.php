@@ -177,7 +177,7 @@ function getProductsMatchingCriteria() {
 			$finishName = $row -> finishName;
 				
 			$output .= "<tr>";
-			$output .= "<td><div class='productId-modal'>". $productId . "</div><a href='#' class='gp-modal-product-id'><img  class='data-image' src='" . $imagePath . "/" . $imageName . "'></a></td>
+			$output .= "<td><div class='productId-modal'>". $productId . "</div><a href='#' class='gp-modal-product-id'><img  class='data-image' src='" . $imagePath . "/" . $productId . '/' .  $imageName . "'></a></td>
 			<td>$regionName</td>
 			<td>$formatName</td>
 			<td>$brandName</td>
@@ -212,7 +212,7 @@ function getProductsForGallery() {
 			$sizeName = $row -> sizeName;
 			$finishName = $row -> finishName;
 			$output .= '<div class="floating-box rounded">';
-			$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $imageName . '></a></div>';
+			$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/'. $imageName . '></a></div>';
 			$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
 			$output .= '</div>';
 // 		}
@@ -267,7 +267,7 @@ function getProductsMatchingRegion($regionName) {
 		$sizeName = $row -> sizeName;
 		$finishName = $row -> finishName;
 		$output .= '<div class="floating-box rounded">';
-		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $imageName . '></a></div>';
+		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/' . $imageName . '></a></div>';
 		$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
 		$output .= '</div>';
 	}
