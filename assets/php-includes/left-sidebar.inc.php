@@ -10,11 +10,12 @@
                     <div id="sidebar-menu">
                         <ul>
                             
+ 							<li class="search">
+                                <input type="text" class="form-control search-bar" placeholder="Search">
+                            </li>      
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
-<!--                                 <ul class="list-unstyled"> -->
                        				<?php echo buildFilter ( 'region', 'region_id' ); ?>        
-                                <!-- </ul> -->
                             </li>
 
                             <li class="has_sub">
@@ -36,9 +37,7 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-database"></i><span> Finish </span><span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
 									<?php echo buildFilter ( 'finish', 'finish_id' ); ?>                                
                             </li>
-<!--                             <li class="search">
-                                <input type="text" class="form-control search-bar" placeholder="Search">
-                            </li>                         
+<!--                                               
  -->                        </ul>
                     </div>
                     <div class="clearfix"></div>
