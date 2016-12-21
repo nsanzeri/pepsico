@@ -12,7 +12,18 @@
     DataTable.prototype.createDataTableButtons = function() {
         0 !== this.$dataTableButtons.length && this.$dataTableButtons.DataTable({
             dom: "Bfrtip",
-            buttons: [],
+            buttons: [{
+                extend: "copy",
+                className: "btn-success"
+            }, {
+                extend: "csv"
+            }, {
+                extend: "excel"
+            }, {
+                extend: "pdf"
+            }, {
+                extend: "print"
+            }],
             responsive: !0
         });
     },

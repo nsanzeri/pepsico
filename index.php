@@ -31,11 +31,13 @@ require_once 'head.inc.php';
                                 </button>
                                 <span class="clearfix"></span>
                             </div>
-                             <form class="navbar-form pull-left" role="search">
+                            <form class="navbar-form pull-left" role="search">
                                 <div class="form-group">
                                 </div>
                                 <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
                             </form>
+
+                            
                         </div>
                         <!--/.nav-collapse -->
                     </div>
