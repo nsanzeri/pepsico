@@ -9,10 +9,10 @@
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
-                        	<li class="search">
-                                <div class="floating-box-search"><input type="text" class="form-control search-bar" placeholder="Search"></div>
+                        	<div class="search">
+                                <div class="floating-box-search"><input id="autocomplete" type="text" class="form-control search-bar" placeholder="Search"></div>
                                 <div class="floating-box-search-icon"><img id="search-icon" src="assets/images/search.png" alt="search" ></div>
-                            </li>     
+                            </div>     
                             
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
