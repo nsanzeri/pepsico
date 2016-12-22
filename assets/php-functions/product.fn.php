@@ -10,8 +10,8 @@ function selectAllProducts() {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			
-			INNER JOIN finish ON products.finish_id = finish.finish_id";
+			INNER JOIN finish ON products.finish_id = finish.finish_id
+			WHERE products.is_active = true";
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
 
@@ -58,8 +58,9 @@ function getSingleProduct($prodId) {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			
-			INNER JOIN finish ON products.finish_id = finish.finish_id WHERE products.prod_id = " . $prodId;
+			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			WHERE products.is_active = true
+			AND products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
 
@@ -109,8 +110,9 @@ function getProductInfo($prodId) {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			
-			INNER JOIN finish ON products.finish_id = finish.finish_id WHERE products.prod_id = " . $prodId;
+			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			WHERE products.is_active = true
+			AND products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
 
@@ -232,7 +234,7 @@ function getProductsMatchingRegion($regionName) {
 			INNER JOIN finish ON products.finish_id = finish.finish_id";
 
 	// 	where `" . $idName . "` in (" . $id . ")";
-	$sql .= " WHERE region.name = '" . $regionName . "'";
+	$sql .= " WHERE products.is_active = true AND region.name = '" . $regionName . "'";
 
 	if (!functionallyEmpty($format)){
 		$sql .= " AND products.format_id IN (" . buildInString($format) . " 0)";
@@ -277,33 +279,34 @@ function getProductsMatchingRegion($regionName) {
 function getProductCount() {
 
 	global $db, $page, $region, $format, $brand, $size, $finish;
-	$sql = "SELECT COUNT(*) AS total FROM `products`";
+	$sql = "SELECT COUNT(*) AS total FROM products
+			WHERE products.is_active = true ";
 
-	$sqlOperator = " WHERE ";
+	$sqlOperator = " AND ";
 	if (!functionallyEmpty($region)){
 		$sql .= $sqlOperator . "region_id IN (" . buildInString($region) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($format)){
 		$sql .= $sqlOperator . " format_id IN (" . buildInString($format) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($brand)){
 		$sql .= $sqlOperator . " brand_id IN (" . buildInString($brand) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($size)){
 		$sql .= $sqlOperator . buildInStringSize($size);
 		
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($finish)){
 		$sql .= $sqlOperator . " finish_id IN (" . buildInString($finish) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 // 	echo 'getProductCount() = ' . $sql;
 	$output = "";
@@ -453,10 +456,11 @@ function isAllCriteriaEmpty() {
 function getRegionCount($id) {
 
 	global $db, $page, $region, $format, $brand, $size, $finish;
-	$sql = "SELECT COUNT(*)  AS total FROM `products`";
+	$sql = "SELECT COUNT(*)  AS total FROM products
+			WHERE products.is_active = true ";
 
 	// 	where `" . $idName . "` in (" . $id . ")";
-	$sqlOperator = " WHERE ";
+	$sqlOperator = " AND ";
 	$sql .= $sqlOperator . " region_id = " . $id;
 
 	$result = $db -> query($sql);
@@ -473,32 +477,33 @@ function prepareCriteriaSql(){
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id ";
+			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			WHERE products.is_active = true ";
 	
-	$sqlOperator = " WHERE ";
+	$sqlOperator = " AND ";
 	if (!functionallyEmpty($region)){
 		$sql .= $sqlOperator . "products.region_id IN (" . buildInString($region) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($format)){
 		$sql .= $sqlOperator . "products.format_id IN (" . buildInString($format) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($brand)){
 		$sql .= $sqlOperator . " products.brand_id IN (" . buildInString($brand) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($size)){
 		$sql .= $sqlOperator .  buildInStringSize($size);
-		$sqlOperator = " AND ";
+		
 	}
 
 	if (!functionallyEmpty($finish)){
 		$sql .= $sqlOperator . " products.finish_id IN (" . buildInString($finish) . " 0)";
-		$sqlOperator = " AND ";
+		
 	}
 	$sql .= '  ORDER BY regionName ASC, formatName ASC, brandName ASC, sizeName ASC, finishName ASC';
 // 	echo 'prepareCriteriaSql() = ' . $sql;
