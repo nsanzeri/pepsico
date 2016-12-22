@@ -115,7 +115,6 @@ require_once 'head.inc.php';
 
 
         <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/modernizr.min.js"></script>
         <script src="assets/js/detect.js"></script>
