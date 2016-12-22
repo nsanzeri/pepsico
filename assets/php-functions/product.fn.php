@@ -58,7 +58,7 @@ function getSingleProduct($prodId) {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			INNER JOIN finish ON products.finish_id = finish.finish_id
 			WHERE products.is_active = true
 			AND products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
@@ -110,7 +110,7 @@ function getProductInfo($prodId) {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			INNER JOIN finish ON products.finish_id = finish.finish_id
 			WHERE products.is_active = true
 			AND products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
@@ -146,26 +146,19 @@ function getProductsMatchingCriteria() {
 	global $db, $page, $region, $format, $brand, $size, $finish;
 	$sql = prepareCriteriaSql();
 	$output = "";
-	// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
-	// 		$output .= "NO CRITERIA SELECTED</div>";
-	// 	}else{
 	$result = $db -> query($sql);
-
 
 	$output .= '<thead>
 			<tr>
-				<th>Image</th>
-				<th>Region</th>
-				<th>Format</th>
-				<th>Brand</th>
-				<th>Size</th>
-				<th>Finish</th>
+			<th>Image</th>
+			<th>Region</th>
+			<th>Format</th>
+			<th>Brand</th>
+			<th>Size</th>
+			<th>Finish</th>
 			</tr>
-		</thead>
-		<tbody>';
-
-
-
+			</thead>
+			<tbody>';
 	$output .= "<div class='panel'>";
 	while ($row = $result -> fetch_object()) {
 		$productId = $row -> productId;
@@ -188,7 +181,6 @@ function getProductsMatchingCriteria() {
 		</tr>";
 	}
 	$output .= "</tbody>";
-	// 	}
 	return $output;
 }
 
@@ -196,9 +188,6 @@ function getProductsForGallery() {
 	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
 	$output = "";
 	$sql = prepareCriteriaSql();
-	// 	if(($x_pos = strpos($sql, ' WHERE ')) == FALSE ){
-	// 		$output .= "NO CRITERIA SELECTED</div>";
-	// 	}else{
 	$result = $db -> query($sql);
 	$output = "";
 
@@ -217,7 +206,6 @@ function getProductsForGallery() {
 		$output .= '<div class="floating-box-image"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id"><img src=' . $imagePath . '/' . $productId . '/'. $imageName . '></a></div>';
 		$output .= '<div class="floating-box-text"><div class="productId-modal">'. $productId . '</div><a href="#" class="gp-modal-product-id">' . $productName . '</a></div>';
 		$output .= '</div>';
-		// 		}
 	}
 	return $output;
 
@@ -233,28 +221,22 @@ function getProductsMatchingRegion($regionName) {
 			INNER JOIN brand ON products.brand_id = brand.brand_id
 			INNER JOIN finish ON products.finish_id = finish.finish_id";
 
-	// 	where `" . $idName . "` in (" . $id . ")";
 	$sql .= " WHERE products.is_active = true AND region.name = '" . $regionName . "'";
 
 	if (!functionallyEmpty($format)){
 		$sql .= " AND products.format_id IN (" . buildInString($format) . " 0)";
 	}
-
 	if (!functionallyEmpty($brand)){
 		$sql .= " AND products.brand_id IN (" . buildInString($brand) . " 0)";
 	}
-
 	if (!functionallyEmpty($size)){
 		$sql .= " AND " . buildInStringSize($size);
 	}
-
 	if (!functionallyEmpty($finish)){
 		$sql .= " AND products.finish_id IN (" . buildInString($finish) . " 0)";
 	}
 
 	$result = $db -> query($sql);
-	// 	$numrows = $result -> num_rows;
-// 	 	echo $sql;
 
 	$output = '';
 	while ($row = $result -> fetch_object()) {
@@ -273,7 +255,6 @@ function getProductsMatchingRegion($regionName) {
 		$output .= '</div>';
 	}
 	return $output;
-
 }
 
 function getProductCount() {
@@ -285,30 +266,23 @@ function getProductCount() {
 	$sqlOperator = " AND ";
 	if (!functionallyEmpty($region)){
 		$sql .= $sqlOperator . "region_id IN (" . buildInString($region) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($format)){
 		$sql .= $sqlOperator . " format_id IN (" . buildInString($format) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($brand)){
 		$sql .= $sqlOperator . " brand_id IN (" . buildInString($brand) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($size)){
 		$sql .= $sqlOperator . buildInStringSize($size);
-		
-		
 	}
 
 	if (!functionallyEmpty($finish)){
 		$sql .= $sqlOperator . " finish_id IN (" . buildInString($finish) . " 0)";
-		
 	}
-// 	echo 'getProductCount() = ' . $sql;
 	$output = "";
 	if ($sqlOperator == " WHERE "){
 		$output .= "NO CRITERIA SELECTED</div>";
@@ -322,7 +296,6 @@ function getProductCount() {
 		}else{
 			$output .= " RESULTS : ";
 		}
-		// 		$output .= "</div><br>	<div id='stats-current-search-label'>CURRENT SEARCH:</div>";
 	}
 	return $output;
 }
@@ -444,12 +417,24 @@ function isAllCriteriaEmpty() {
 	global $db, $page, $region, $format, $brand, $size, $finish;
 	$output = "";
 	$empty = true;
-	if (!functionallyEmpty($region)){$empty = false;}
-	if (!functionallyEmpty($format)){$empty = false;}
-	if (!functionallyEmpty($brand)){$empty = false;}
-	if (!functionallyEmpty($size)){$empty = false;}
-	if (!functionallyEmpty($finish)){$empty = false;}
-	if (" | " == substr($output, 0, 3)){$empty = false;}
+	if (!functionallyEmpty($region)){
+		$empty = false;
+	}
+	if (!functionallyEmpty($format)){
+		$empty = false;
+	}
+	if (!functionallyEmpty($brand)){
+		$empty = false;
+	}
+	if (!functionallyEmpty($size)){
+		$empty = false;
+	}
+	if (!functionallyEmpty($finish)){
+		$empty = false;
+	}
+	if (" | " == substr($output, 0, 3)){
+		$empty = false;
+	}
 	return $empty;
 }
 
@@ -477,36 +462,31 @@ function prepareCriteriaSql(){
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id 
+			INNER JOIN finish ON products.finish_id = finish.finish_id
 			WHERE products.is_active = true ";
-	
+
 	$sqlOperator = " AND ";
 	if (!functionallyEmpty($region)){
 		$sql .= $sqlOperator . "products.region_id IN (" . buildInString($region) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($format)){
 		$sql .= $sqlOperator . "products.format_id IN (" . buildInString($format) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($brand)){
 		$sql .= $sqlOperator . " products.brand_id IN (" . buildInString($brand) . " 0)";
-		
 	}
 
 	if (!functionallyEmpty($size)){
 		$sql .= $sqlOperator .  buildInStringSize($size);
-		
 	}
 
 	if (!functionallyEmpty($finish)){
 		$sql .= $sqlOperator . " products.finish_id IN (" . buildInString($finish) . " 0)";
-		
 	}
 	$sql .= '  ORDER BY regionName ASC, formatName ASC, brandName ASC, sizeName ASC, finishName ASC';
-// 	echo 'prepareCriteriaSql() = ' . $sql;
+	// 	echo 'prepareCriteriaSql() = ' . $sql;
 	return $sql;
 }
 
