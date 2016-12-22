@@ -10,7 +10,8 @@
                     <div id="sidebar-menu">
                         <ul>
                         	<li class="search">
-                                <input type="text" class="form-control search-bar" placeholder="Search">
+                                <div class="floating-box-search"><input type="text" class="form-control search-bar" placeholder="Search"></div>
+                                <div class="floating-box-search-icon"><img id="search-icon" src="assets/images/search.png" alt="search" ></div>
                             </li>     
                             
                             <li class="has_sub">
