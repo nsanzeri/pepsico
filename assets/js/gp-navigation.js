@@ -165,43 +165,6 @@ $(document).ready(function(){
    	   });
    }
    
-<<<<<<< HEAD
-   function testAppend360(){
-		$spinner = '<img src="images/mini/001.jpg" width="400" height="400" class="reel" id="image"'+
-			'data-images="images/mini/###.jpg" data-frames="20" data-frame="14"'+
-			'data-rows="6" data-row="3" data-speed="0.3">'+
-
-		'<div class="reel-annotation" id="first_row" data-start="1"'+
-			'data-end="20"'+
-			'data-x="10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105"'+
-			'data-y="10" data-for="image">First Row</div>'+
-		'<div class="reel-annotation" id="last_row" data-start="101"'+
-			'data-end="120"'+
-			'data-x="105,100,95,90,85,80,75,70,65,60,55,50,45,40,35,30,25,20,15,10"'+
-			'data-y="175" data-for="image">Last Row</div>';
-
-		$spinnerVr = '<div id="container" style="width:439px;height:540px;">' +
-		'This content requires HTML5 &amp; Javascript or Adobe Flash Player Version 9 or higher.'+
-	'</div>'+
-	'<script type="text/javascript">'+
-		'getProductSpinnerConfig(1);'+
-	'</script>';
-
-		$( "#gp-modal-product" ).append($spinnerVr);
-   }
-   function hideUrlBar(){}
-});
-function hideUrlBar(){}
-function getProductSpinnerConfig($prodId){
-	// create the object player with the container
-	obj=new object2vrPlayer("container");
-	// add the skin object
-	skin=new object2vrSkin(obj);
-	// load the configuration
-	str='<?xml version="1.0" encoding="UTF-8"?>';
-	str+='<vrobject>';
-	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
-=======
    function hideUrlBar(){}
 });
 function hideUrlBar(){}
@@ -214,7 +177,6 @@ function getProductSpinnerConfig($prodId){
 	str='<?xml version="1.0" encoding="UTF-8"?>';
 	str+='<vrobject>';
 	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
->>>>>>> branch 'master' of https://github.com/nsanzeri/pepsico
 	str+='  <control simulatemass="1" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="0" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="1.000" controller="1" sensitivity="10"/>';
 	str+='  <view>';
 	str+='    <start row="0" column="0" state="0"/>';
