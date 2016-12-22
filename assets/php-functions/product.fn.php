@@ -6,11 +6,11 @@ function selectAllProducts() {
 
 	$sql = "SELECT products.name AS productName,
 			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
+			products.size AS sizeName, finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
+			
 			INNER JOIN finish ON products.finish_id = finish.finish_id";
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
@@ -54,11 +54,11 @@ function getSingleProduct($prodId) {
 
 	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
 			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
+			products.size AS sizeName, finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
+			
 			INNER JOIN finish ON products.finish_id = finish.finish_id WHERE products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
@@ -105,11 +105,11 @@ function getProductInfo($prodId) {
 
 	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
 			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
+			products.size AS sizeName, finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
+			
 			INNER JOIN finish ON products.finish_id = finish.finish_id WHERE products.prod_id = " . $prodId;
 	$result = $db -> query($sql);
 	$numrows = $result -> num_rows;
@@ -225,11 +225,10 @@ function getProductsMatchingRegion($regionName) {
 	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
 	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
 			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
+			products.size AS sizeName, finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
 			INNER JOIN finish ON products.finish_id = finish.finish_id";
 
 	// 	where `" . $idName . "` in (" . $id . ")";
@@ -244,7 +243,7 @@ function getProductsMatchingRegion($regionName) {
 	}
 
 	if (!functionallyEmpty($size)){
-		$sql .= " AND products.size_id IN (" . buildInString($size) . " 0)";
+		$sql .= " AND " . buildInStringSize($size);
 	}
 
 	if (!functionallyEmpty($finish)){
@@ -253,7 +252,7 @@ function getProductsMatchingRegion($regionName) {
 
 	$result = $db -> query($sql);
 	// 	$numrows = $result -> num_rows;
-	// 	echo $sql;
+// 	 	echo $sql;
 
 	$output = '';
 	while ($row = $result -> fetch_object()) {
@@ -297,7 +296,8 @@ function getProductCount() {
 	}
 
 	if (!functionallyEmpty($size)){
-		$sql .= $sqlOperator . " size_id IN (" . buildInString($size) . " 0)";
+		$sql .= $sqlOperator . buildInStringSize($size);
+		
 		$sqlOperator = " AND ";
 	}
 
@@ -305,6 +305,7 @@ function getProductCount() {
 		$sql .= $sqlOperator . " finish_id IN (" . buildInString($finish) . " 0)";
 		$sqlOperator = " AND ";
 	}
+// 	echo 'getProductCount() = ' . $sql;
 	$output = "";
 	if ($sqlOperator == " WHERE "){
 		$output .= "NO CRITERIA SELECTED</div>";
@@ -468,13 +469,12 @@ function prepareCriteriaSql(){
 	global $db, $page, $region, $format, $brand, $size, $finish, $regionName;
 	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
 			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			size.name AS sizeName, finish.name  AS finishName FROM products
+			products.size AS sizeName, finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN size ON products.size_id = size.size_id
 			INNER JOIN finish ON products.finish_id = finish.finish_id ";
-
+	
 	$sqlOperator = " WHERE ";
 	if (!functionallyEmpty($region)){
 		$sql .= $sqlOperator . "products.region_id IN (" . buildInString($region) . " 0)";
@@ -492,7 +492,7 @@ function prepareCriteriaSql(){
 	}
 
 	if (!functionallyEmpty($size)){
-		$sql .= $sqlOperator . " products.size_id IN (" . buildInString($size) . " 0)";
+		$sql .= $sqlOperator .  buildInStringSize($size);
 		$sqlOperator = " AND ";
 	}
 
@@ -501,6 +501,7 @@ function prepareCriteriaSql(){
 		$sqlOperator = " AND ";
 	}
 	$sql .= '  ORDER BY regionName ASC, formatName ASC, brandName ASC, sizeName ASC, finishName ASC';
+// 	echo 'prepareCriteriaSql() = ' . $sql;
 	return $sql;
 }
 
