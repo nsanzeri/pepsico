@@ -9,33 +9,36 @@
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
-                        	<div class="search">
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><span> <div id="all-clear">clear all x</div> </span> </a>
+                            </li>
+                        	<li class="search">
                                 <div class="floating-box-search"><input id="autocomplete" type="text" class="form-control search-bar" placeholder="Search"></div>
                                 <div class="floating-box-search-icon"><img id="search-icon" src="assets/images/search.png" alt="search" ></div>
-                            </div>     
+                            </li>     
                             
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><div class="gp-clearall" id="region-clear">clear all x</div></i></span></a>
                        				<?php echo buildFilter ( 'region', 'region_id' ); ?>        
                             </li>
 
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-panorama-vertical"></i> <span> Format </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-panorama-vertical"></i> <span> Format </span> <span class="pull-right"><div class="gp-clearall" id="format-clear">clear all x</div></i></span></a>
 									<?php echo buildFilter ( 'format', 'format_id' ); ?>                                  
                             </li>
 
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-copyright"></i><span> Brand </span><span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-copyright"></i><span> Brand </span><span class="pull-right"><div class="gp-clearall" id="brand-clear">clear all x</div></span></a>
 									<?php echo buildFilter ( 'brand', 'brand_id' ); ?>
                             </li>
 
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-crop"></i><span> Size </span><span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-crop"></i><span> Size </span><span class="pull-right"><div class="gp-clearall" id="size-clear">clear all x</div></i></span></a>
 									<?php echo buildFilter ( 'size', 'size_id' ); ?>
                             </li>
 
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-database"></i><span> Finish </span><span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-database"></i><span> Finish </span><span class="pull-right"><div class="gp-clearall" id="finish-clear">clear all x</div></i></span></a>
 									<?php echo buildFilter ( 'finish', 'finish_id' ); ?>                                
                             </li>
                         </ul>
