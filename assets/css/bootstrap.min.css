@@ -7107,6 +7107,12 @@ button.close {
 	width:300px;
 }
 
+#product-dialog .modal-header ul {
+  text-align:right;
+  float:left;
+  padding:0px;
+}
+
 #product-dialog .modal-footer {
   text-align: right;
 }
