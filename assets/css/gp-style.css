@@ -193,13 +193,6 @@ a:hover {
 	cursor:pointer;
 }
 
-.floating-box-search-icon:hover {
-    content: url('../images/search_hover.png');
-	display: inline-block;
-	width: 10%;
-	padding-bottom: 10px;
-	cursor:pointer;}
-
 /*--gallery floating boxes - END */
 
 /* -- modal styling --*/
