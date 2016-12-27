@@ -220,7 +220,6 @@ function getProductSpinnerConfig($prodId){
 	str+='    <polystyle mode="0" backgroundalpha="0.251" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1.000"/>';
 	str+='  </hotspots>';
 	str+='</vrobject>';
-	str+='';
 	obj.readConfigString(str);
 //	obj.readConfigUrl("assets/xml/" + $prodId + ".xml");
 	// hide the URL bar on the iPhone
