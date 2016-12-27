@@ -179,16 +179,38 @@ function getProductSpinnerConfig($prodId){
 	// add the skin object
 	skin=new object2vrSkin(obj);
 	// load the configuration
+//	str='<?xml version="1.0" encoding="UTF-8"?>';
+//	str+='<vrobject>';
+//	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
+//	str+='  <control simulatemass="1" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="0" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="1.000" controller="1" sensitivity="10"/>';
+//	str+='  <view>';
+//	str+='    <start row="0" column="0" state="0"/>';
+//	str+='    <zoom default="1.000" centerx="0.00000" centery="0.00000" min="1" max="4.000"/>';
+//	str+='    <viewer imagescaling="1" backgroundcolor="0xffffff" background="1"/>';
+//	str+='  </view>';
+//	str+='  <autorotate speed="0.200" onlyonce="1" delay="0.00" start="0"/>';
+//	str+='  <userdata title="" datetime="" description="" copyright="" author="" source="" comment="" info=""/>';
+//	str+='  <qthotspots enabled="0" reuse="8">';
+//	str+='    <label width="180" backgroundalpha="1.000" enabled="0" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1.000" borderradius="1" wordwrap="1" textalpha="1.000"/>';
+//	str+='  </qthotspots>';
+//	str+='  <hotspots>';
+//	str+='    <label width="180" backgroundalpha="1.000" enabled="0" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1.000" borderradius="1" wordwrap="1" textalpha="1.000"/>';
+//	str+='    <polystyle mode="0" backgroundalpha="0.251" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1.000"/>';
+//	str+='  </hotspots>';
+//	str+='</vrobject>';
+//	str+='';
+	
+	
 	str='<?xml version="1.0" encoding="UTF-8"?>';
 	str+='<vrobject>';
-	str+='  <input states="1" windowheight="899" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="600" height="899" preload="1" columns="12" rows="4" fileextension="jpg"/>';
-	str+='  <control simulatemass="1" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="0" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="1.000" controller="1" sensitivity="10"/>';
+	str+='  <input states="1" windowheight="600" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="400" height="900" preload="1" columns="12" rows="4" fileextension="jpg"/>';
+	str+='  <control simulatemass="0" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="1" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="4.000" controller="1" sensitivity="10"/>';
 	str+='  <view>';
 	str+='    <start row="0" column="0" state="0"/>';
-	str+='    <zoom default="1.000" centerx="0.00000" centery="0.00000" min="1" max="4.000"/>';
+	str+='    <zoom default="1.000" centerx="0.00000" centery="0.00000" min="1" max="3.000"/>';
 	str+='    <viewer imagescaling="1" backgroundcolor="0xffffff" background="1"/>';
 	str+='  </view>';
-	str+='  <autorotate speed="0.200" onlyonce="1" delay="0.00" start="0"/>';
+	str+='  <autorotate speed="0.150" onlyonce="1" delay="2.00" start="0"/>';
 	str+='  <userdata title="" datetime="" description="" copyright="" author="" source="" comment="" info=""/>';
 	str+='  <qthotspots enabled="0" reuse="8">';
 	str+='    <label width="180" backgroundalpha="1.000" enabled="0" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1.000" borderradius="1" wordwrap="1" textalpha="1.000"/>';
