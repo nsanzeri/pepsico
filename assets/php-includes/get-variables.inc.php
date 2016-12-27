@@ -18,6 +18,13 @@ if (isset($_POST['regionName'])) {
 	$regionName = $_POST['regionName'];
 }
 
+if (isset($_GET['searchTerm'])) {
+	$searchTerm = $_GET['searchTerm'];
+} else if (isset($_POST['searchTerm'])) {
+	$searchTerm = $_POST['searchTerm'];
+// 	echo $searchTerm;
+}
+
 if (isset($_GET['prodId'])) {
 	$prodId = $_GET['prodId'];
 }else if (isset($_POST['prodId'])) {

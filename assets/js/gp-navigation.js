@@ -3,6 +3,7 @@
 $(document).ready(function(){
 	buildSingleProductLinks();
 	$( "#map_form" ).submit(function( event ) {
+		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
 	    $("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
@@ -10,6 +11,7 @@ $(document).ready(function(){
 	    $("input:hidden[name='finish']").val(JSON.stringify($("input[name='finish_array[]']:checkbox:checked").serializeArray()));
 	});
 	$( "#grid_form" ).submit(function( event ) {
+		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
 		$("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
@@ -17,6 +19,7 @@ $(document).ready(function(){
 	    $("input:hidden[name='finish']").val(JSON.stringify($("input[name='finish_array[]']:checkbox:checked").serializeArray()));
 	});
 	$( "#gallery_form" ).submit(function( event ) {
+		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
 		$("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
@@ -66,8 +69,9 @@ $(document).ready(function(){
    }); 
    // AJAX map clicks - END
    
-    function ajaxReset($region, $format, $brand, $size, $finish){
-	   $("input:hidden[name='region']").val($region);
+    function ajaxReset($region, $format, $brand, $size, $finish, $searchTerm){
+       $("input:hidden[name='searchTerm']").val($searchTerm);
+       $("input:hidden[name='region']").val($region);
 	   $("input:hidden[name='format']").val($format);
 	   $("input:hidden[name='brand']").val($brand);
 	   $("input:hidden[name='size']").val($size);
@@ -80,6 +84,7 @@ $(document).ready(function(){
    function callRegionalAjax($regionName){
        $this = $(this);
        
+       $searchTerm = JSON.stringify($("input[name='searchTerm']"));
        $region = JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray());
        $format = JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray());
        $brand = JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray());
@@ -111,7 +116,7 @@ $(document).ready(function(){
 //		       $(".modal-dialog").css("width", "900px");   
 		       $( "#region-dialog" ).fadeTo('slow', 1);
 		       
-	       	   ajaxReset($region, $format, $brand, $size, $finish);    
+	       	   ajaxReset($region, $format, $brand, $size, $finish, $searchTerm);    
            },// End success callback
            'done' : function(response) {
            } // End done callback
@@ -156,14 +161,14 @@ $(document).ready(function(){
 	   });
    }
 
-   function buildSingleProductLinks(){
-	   $(".gp-modal-product-id").each(function () {
-   	       $(this).on('click', function() {
-   	       	$prodId = $(this).prev().text();
-   	       	retrieveSingleProduct($prodId);
-   	       });
-   	   });
-   }
+   function buildSingleProductLinks() {
+		$(".gp-modal-product-id").each(function() {
+			$(this).on('click', function() {
+				$prodId = $(this).prev().text();
+				retrieveSingleProduct($prodId);
+			});
+		});
+	}
    
    function hideUrlBar(){}
 });
