@@ -203,7 +203,7 @@ function getProductSpinnerConfig($prodId){
 	
 	str='<?xml version="1.0" encoding="UTF-8"?>';
 	str+='<vrobject>';
-	str+='  <input states="1" windowheight="600" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="400" height="900" preload="1" columns="12" rows="4" fileextension="jpg"/>';
+	str+='  <input states="1" windowheight="450" width="600" imagepath="assets/images/products/' + $prodId + '/rotate" preview="4" windowwidth="300" height="900" preload="1" columns="12" rows="4" fileextension="jpg"/>';
 	str+='  <control simulatemass="0" lockedmouse="0" swapxy="0" lockedkeyboard="0" dblclickfullscreen="0" revx="0" invertwheel="1" revy="1" wrapx="1" wrapy="0" trapwheel="1" automovemode="1" lockedwheel="0" speedwheel="4.000" controller="1" sensitivity="10"/>';
 	str+='  <view>';
 	str+='    <start row="0" column="0" state="0"/>';

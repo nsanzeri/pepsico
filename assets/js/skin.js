@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Object2VR 3.1.1/10756
 // Filename: Pepsi Fortune Skin_V1.ggsk
-// Generated Thu Dec 22 13:53:12 2016
+// Generated Tue Dec 27 15:34:51 2016
 
 function object2vrSkin(player,base) {
 	var me=this;
@@ -102,7 +102,7 @@ function object2vrSkin(player,base) {
 	this.addSkin=function() {
 		this._toolbar=document.createElement('div');
 		this._toolbar.ggId="toolbar";
-		this._toolbar.ggParameter={ rx:0,ry:0,a:0,sx:0.85,sy:0.85 };
+		this._toolbar.ggParameter={ rx:0,ry:0,a:0,sx:0.75,sy:0.75 };
 		this._toolbar.ggVisible=true;
 		this._toolbar.className='ggskin ggskin_rectangle';
 		this._toolbar.ggType='rectangle';
@@ -133,7 +133,7 @@ function object2vrSkin(player,base) {
 			} else {
 				me._toolbar.style[domTransition]='all 500ms ease-out 0ms';
 			}
-			me._toolbar.ggParameter.sx=1;me._toolbar.ggParameter.sy=1;
+			me._toolbar.ggParameter.sx=0.85;me._toolbar.ggParameter.sy=0.85;
 			me._toolbar.style[domTransform]=parameterToTransform(me._toolbar.ggParameter);
 		}
 		this._toolbar.onmouseout=function () {
@@ -142,7 +142,7 @@ function object2vrSkin(player,base) {
 			} else {
 				me._toolbar.style[domTransition]='all 500ms ease-out 0ms';
 			}
-			me._toolbar.ggParameter.sx=0.85;me._toolbar.ggParameter.sy=0.85;
+			me._toolbar.ggParameter.sx=0.75;me._toolbar.ggParameter.sy=0.75;
 			me._toolbar.style[domTransform]=parameterToTransform(me._toolbar.ggParameter);
 		}
 		this._left=document.createElement('div');
@@ -540,14 +540,14 @@ function object2vrSkin(player,base) {
 			this.style[domTransition]='none';
 			if (this.parentNode) {
 				var w=this.parentNode.offsetWidth;
-				this.style.left=Math.floor(-112 + w/2) + 'px';
+				this.style.left=Math.floor(-116 + w/2) + 'px';
 				var h=this.parentNode.offsetHeight;
-				this.style.top=Math.floor(0 + h/2) + 'px';
+				this.style.top=Math.floor(-68 + h/2) + 'px';
 			}
 		}
 		hs ='position:absolute;';
-		hs+='left: -112px;';
-		hs+='top:  0px;';
+		hs+='left: -116px;';
+		hs+='top:  -68px;';
 		hs+='width: 224px;';
 		hs+='height: 65px;';
 		hs+=cssPrefix + 'transform-origin: 50% 50%;';
