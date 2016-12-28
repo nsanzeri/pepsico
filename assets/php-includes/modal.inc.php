@@ -50,7 +50,7 @@
 					  <li>Brand:</li>
 					  <li>Size:</li>
 					  <li>Finish:</li>
-					  <li>Overal H x W x D:</li>
+					  <li>Overall H x W x D:</li>
 					  <li>Status:</li>
 					  <li>ID#:</li>
 					</ul>
