@@ -52,9 +52,19 @@ function getSingleProduct($prodId) {
 
 	global $db, $prodId;
 
-	$sql = "SELECT products.prod_id AS productId, products.name AS productName, products.name AS productName, products.image_path AS imagePath,products.image_name AS imageName,
-			region.name AS regionName, format.name AS formatName, brand.name AS brandName,
-			products.size AS sizeName, finish.name  AS finishName FROM products
+	$sql = "SELECT products.prod_id AS productId, 
+				products.name AS productName, 
+				products.code_name AS codeName,
+				products.dimension AS dimension,
+				products.size AS size,
+				products.status AS status,
+				products.description AS description,
+				products.image_path AS imagePath,
+				products.image_name AS imageName,
+				region.name AS regionName, 
+				format.name AS formatName, 
+				brand.name AS brandName,
+				finish.name  AS finishName FROM products
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
@@ -71,13 +81,17 @@ function getSingleProduct($prodId) {
 	while ($row = $result -> fetch_object()) {
 		$productId = $row ->productId;
 		$productName = $row -> productName;
+		$codeName = $row -> codeName;
 		$imagePath = $row -> imagePath;
 		$imageName = $row -> imageName;
 		$regionName = $row -> regionName;
 		$formatName = $row -> formatName;
 		$brandName = $row -> brandName;
-		$sizeName = $row -> sizeName;
+		$size = $row -> size;
 		$finishName = $row -> finishName;
+		$dimension = $row -> dimension;
+		$description = $row -> description;
+		$status = $row -> status;
 
 		$output['image360'] .= "<div class='floating-box-vr360'>
 		<div id='container' style='height: 450px; width: 300px;'>
@@ -87,14 +101,17 @@ function getSingleProduct($prodId) {
 		</script>
 		</div>";
 
-		$output['header'] .= "<div class='floating-box-sp'>
-		<div class='floating-box-text-sp'> $productName  </div>
-		<div class='floating-box-text-sp'> $regionName  </div>
-		<div class='floating-box-text-sp'> $formatName  </div>
-		<div class='floating-box-text-sp'> $brandName  </div>
-		<div class='floating-box-text-sp'> $sizeName  </div>
-		<div class='floating-box-text-sp'> $finishName  </div>
-		</div>";
+		$output['header'] .= "
+			<div class='label-wrap'>Name:</div><div class='info'>$productName</div>
+			<div class='label-wrap'>Code Name:</div><div class='info'>$codeName</div>
+			<div class='label-wrap'>Region:</div><div class='info'>$regionName</div>
+			<div class='label-wrap'>Format:</div><div class='info'>$formatName</div>
+			<div class='label-wrap'>Brand:</div><div class='info'>$brandName</div>
+			<div class='label-wrap'>Size:</div><div class='info'>$size</div>
+			<div class='label-wrap'>finish:</div><div class='info'>$finishName</div>
+			<div class='label-wrap'>Overall H x W x D:</div><div class='info'>$dimension</div>
+			<div class='label-wrap'>Status:</div><div class='info'>$status</div>
+			<div class='label-wrap'>ID #:</div><div class='info'>" . str_pad($productId, 5, '0', STR_PAD_LEFT) ."</div>";
 	}
 
 	return $output;

@@ -398,3 +398,17 @@ a:hover {
 }
 
 /*-- search stying override of jquery - END --*/
+
+.label-wrap
+{
+width:150px;
+text-align:right;
+float:left;
+}
+
+.info
+{
+width:150px;
+float:left;
+text-align:left;
+}
