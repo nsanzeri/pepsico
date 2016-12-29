@@ -254,7 +254,7 @@ function getProductsMatchingRegion($regionName) {
 	}
 	if (!functionallyEmpty($searchTerm)){
 		$sql .= " AND " . buildSearchTermSql($searchTerm);
-	}
+	} 
 // 	echo 'getProductsMatchingRegion() = <br>' . $sql;
 	$result = $db -> query($sql);
 
