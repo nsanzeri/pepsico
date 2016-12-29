@@ -90,7 +90,7 @@ $(document).ready(function(){
        $brand = JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray());
        $size = JSON.stringify($("input[name='size_array[]']:checkbox:checked").serializeArray());
        $finish = JSON.stringify($("input[name='finish_array[]']:checkbox:checked").serializeArray());
-
+       $searchTerm = $("#autocomplete").val();
        $.ajax({
            url: "assets/ajax/product.ajax.php",
            type: "POST",
@@ -99,7 +99,8 @@ $(document).ready(function(){
                'format' : $format,
                'brand' : $brand,
                'size' : $size,
-               'finish' : $finish
+               'finish' : $finish,
+               'searchTerm' : $searchTerm
            }, 
            'dataType' : "html",// End data
            'beforeSend' : function() {

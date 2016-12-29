@@ -237,9 +237,8 @@ function getProductsMatchingRegion($regionName) {
 			INNER JOIN region ON products.region_id = region.region_id
 			INNER JOIN format ON products.format_id = format.format_id
 			INNER JOIN brand ON products.brand_id = brand.brand_id
-			INNER JOIN finish ON products.finish_id = finish.finish_id";
-
-	$sql .= " WHERE products.is_active = true AND region.name = '" . $regionName . "'";
+			INNER JOIN finish ON products.finish_id = finish.finish_id
+			WHERE products.is_active = true AND region.name = '" . $regionName . "'";
 
 	if (!functionallyEmpty($format)){
 		$sql .= " AND products.format_id IN (" . buildInString($format) . " 0)";
@@ -256,7 +255,7 @@ function getProductsMatchingRegion($regionName) {
 	if (!functionallyEmpty($searchTerm)){
 		$sql .= " AND " . buildSearchTermSql($searchTerm);
 	}
-	
+// 	echo 'getProductsMatchingRegion() = <br>' . $sql;
 	$result = $db -> query($sql);
 
 	$output = '';

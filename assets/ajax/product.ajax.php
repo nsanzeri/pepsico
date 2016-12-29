@@ -10,7 +10,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH'])
 	require_once '../php-includes/connect-local.inc.php';
 	require_once '../php-includes/get-variables.inc.php';
 
-	$output = getProductsMatchingRegion($region);
+	$output = getProductsMatchingRegion($region, $format, $brand, $size, $finish, $searchTerm);
 	echo $output;
 }
 
