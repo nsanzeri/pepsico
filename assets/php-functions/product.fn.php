@@ -255,7 +255,11 @@ function getProductsMatchingRegion($regionName) {
 	if (!functionallyEmpty($searchTerm)){
 		$sql .= " AND " . buildSearchTermSql($searchTerm);
 	}
+<<<<<<< HEAD
 // 	echo 'getProductsMatchingRegion() = <br>' . $sql;
+=======
+	echo 'getProductsMatchingRegion() = <br>' . $sql;
+>>>>>>> branch 'master' of https://github.com/nsanzeri/pepsico
 	$result = $db -> query($sql);
 
 	$output = '';
