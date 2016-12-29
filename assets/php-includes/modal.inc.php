@@ -38,8 +38,9 @@
 			</div>
 			<div class="modal-body">
 				<div id="gp-modal-product"></div>
-			</div>
+			</div>				
 			<div class="modal-header">
+			<div class="product-details">Product details</div>
 				<h4 class="modal-title" id="gp-modal-product-label">
 				</h4>
 				

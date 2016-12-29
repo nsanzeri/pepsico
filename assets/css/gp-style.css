@@ -430,10 +430,18 @@ font-weight:bold;
 
 .info
 {
-width:250px;
+width:220px;
 float:left;
 text-align:left;
 font-family: bebasneue, Helvetica, sans-serif;
 color: #8c8f90;
 font-size: 1em;
+}
+
+.product-details{
+text-align:center;
+font-family: bebasneue, Helvetica, sans-serif;
+color: #8c8f90;
+font-size: 2em;
+font-weight:bold;
 }
