@@ -290,12 +290,18 @@ a:hover {
 	float: right;
 	font-size: .7em;
 	color: #7c8792;
+	padding-top:5px;
 }
 
 .gp-clearall:hover {
-	color: #0080ff;
+	color: #359aff;
 }
 
+
+.gp-clearall i {
+	font-size: 1.3em;
+	vertical-align: middle;
+}
 
 .gp-animate-zoom {
 	-webkit-animation: animatezoom 0.6s;
