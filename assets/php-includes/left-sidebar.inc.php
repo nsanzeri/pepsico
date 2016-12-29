@@ -20,27 +20,27 @@
                             
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><div class="gp-clearall" id="region-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
-                       				<?php echo buildFilter ( 'region', 'region_id' ); ?>        
+                       				<?php echo buildFilter ( 'region', 'region_id', false ); ?>        
                             </li>
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-panorama-vertical"></i> <span> Format </span> <span class="pull-right"><div class="gp-clearall" id="format-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
-									<?php echo buildFilter ( 'format', 'format_id' ); ?>                                  
+									<?php echo buildFilter ( 'format', 'format_id', false ); ?>                                  
                             </li>
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-copyright"></i><span> Brand </span><span class="pull-right"><div class="gp-clearall" id="brand-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></span></a>
-									<?php echo buildFilter ( 'brand', 'brand_id' ); ?>
+									<?php echo buildFilter ( 'brand', 'brand_id', false ); ?>
                             </li>
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-crop"></i><span> Size </span><span class="pull-right"><div class="gp-clearall" id="size-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
-									<?php echo buildFilter ( 'size', 'size_id' ); ?>
+									<?php echo buildFilter ( 'size', 'size_id', false ); ?>
                             </li>
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-database"></i><span> Finish </span><span class="pull-right"><div class="gp-clearall" id="finish-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
-									<?php echo buildFilter ( 'finish', 'finish_id' ); ?>                                
+									<?php echo buildFilter ( 'finish', 'finish_id', false ); ?>                                
                             </li>
                         </ul>
                     </div>
