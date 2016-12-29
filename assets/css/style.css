@@ -3226,6 +3226,7 @@ body.fixed-left .side-menu.left {
 	color:#7c8792;
 }
 
+
 #all-clear:hover {
 	color: #359aff;
 }
@@ -3262,10 +3263,13 @@ body.fixed-left .side-menu.left {
   padding-left: 80px;
 }
 #sidebar-menu > ul > li > a {
+  color: rgba(255, 255, 255, 0.7);
   display: block;
   padding: 15px 25px;
-  background-color: #2a323c;
 }
+
+
+
 #sidebar-menu > ul > li > a:hover {
   background-color: #20262d;
   text-decoration: none;
@@ -3605,9 +3609,7 @@ File: Responsive
   .button-menu-mobile {
     display: block;
   }
-  .search-bar {
-    display: none !important;
-  }
+  
 .jvectormap-container {
     width: 100%;
     height: 100%;
