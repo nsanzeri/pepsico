@@ -4,7 +4,6 @@
                         <img src="assets/images/logo_pepsico.png" alt="Logo" >
                         <br><br><br>
                         <h3>GLOBAL PACKAGING <span style="color: #03a9f4">DATABASE</span></h3>
-                        <h2>Search the globe for different structures, sizes & more</h2>
                     </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
