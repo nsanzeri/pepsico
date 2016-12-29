@@ -3390,7 +3390,7 @@ body.fixed-left .side-menu.left {
 
 .user-details {
   z-index: 9999;
-  min-height: 300px;
+  min-height: 250px;
   padding: 20px;
   position: relative;
   background: url('../images/cans.jpg') ;
