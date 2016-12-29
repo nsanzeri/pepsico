@@ -3,11 +3,14 @@
 $(document).ready(function(){
 	buildSingleProductLinks();
 	$( "#map_form" ).submit(function( event ) {
+//		alert("Size array  = " + $("input[name='size_array[]']").serializeArray());
+//		alert("Region araay  = " + $("input[name='region_array[]']").serializeArray());
 		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
 	    $("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='size']").val(JSON.stringify($("input[name='size_array[]']:checkbox:checked").serializeArray()));
+	    $("input:hidden[name='size']").val(JSON.stringify($("input[name='size_metric_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='finish']").val(JSON.stringify($("input[name='finish_array[]']:checkbox:checked").serializeArray()));
 	});
 	$( "#grid_form" ).submit(function( event ) {
