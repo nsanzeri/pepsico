@@ -292,6 +292,11 @@ a:hover {
 	color: #7c8792;
 }
 
+.gp-clearall:hover {
+	color: #0080ff;
+}
+
+
 .gp-animate-zoom {
 	-webkit-animation: animatezoom 0.6s;
 	animation: animatezoom 0.6s
