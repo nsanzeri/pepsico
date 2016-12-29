@@ -11,9 +11,11 @@
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><span> <div id="all-clear">clear all <i class="mdi mdi-close-circle-outline"></i></div> </span> </a>
                             </li>
-                        	<li class="search">
+                        	<li class="search has_sub">
+                        		<a href="javascript:void(0);" class="waves-effect">
                                 <div class="floating-box-search"><input id="autocomplete" type="text" class="form-control search-bar" placeholder="Search"></div>
                                 <div class="floating-box-search-icon"><img id="search-icon" src="assets/images/search.png"  onmouseover="this.src='assets/images/search_hover.png';" onmouseout="this.src='assets/images/search.png';" alt="search" ></div>
+                                </a>
                             </li>     
                             
                             <li class="has_sub">
