@@ -1,4 +1,10 @@
 /* Global products Style sheet */
+@font-face {
+  font-family: bebasneue;
+  src: url(/assets/fonts/bebasneuebook.otf);
+
+}
+
 form {
 	display: inline;
 	padding: 0px;
@@ -169,7 +175,6 @@ a:hover {
 .floating-box-vr360 {
 	height: 450px;
 	width: 300px;
-	margin: 10px;
 	display: inline-block;
 }
 
@@ -414,14 +419,21 @@ a:hover {
 
 .label-wrap
 {
-width:150px;
+width:200px;
 text-align:right;
 float:left;
+font-family: bebasneue, Helvetica, sans-serif;
+color: #24acea;
+font-size: 1em;
+font-weight:bold;
 }
 
 .info
 {
-width:150px;
+width:250px;
 float:left;
 text-align:left;
+font-family: bebasneue, Helvetica, sans-serif;
+color: #8c8f90;
+font-size: 1em;
 }

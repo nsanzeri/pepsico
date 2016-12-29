@@ -42,18 +42,7 @@
 			<div class="modal-header">
 				<h4 class="modal-title" id="gp-modal-product-label">
 				</h4>
-				<ul style="list-style-type:none">
-					  <li>Name:</li>
-					  <li>Code Name:</li>
-					  <li>Region:</li>
-					  <li>Format:</li>
-					  <li>Brand:</li>
-					  <li>Size:</li>
-					  <li>Finish:</li>
-					  <li>Overall H x W x D:</li>
-					  <li>Status:</li>
-					  <li>ID#:</li>
-					</ul>
+				
 			</div>
 				
 		</div>

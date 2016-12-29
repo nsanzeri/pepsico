@@ -102,16 +102,16 @@ function getSingleProduct($prodId) {
 		</div>";
 
 		$output['header'] .= "
-			<div class='label-wrap'>Name:</div><div class='info'>$productName</div>
-			<div class='label-wrap'>Code Name:</div><div class='info'>$codeName</div>
-			<div class='label-wrap'>Region:</div><div class='info'>$regionName</div>
-			<div class='label-wrap'>Format:</div><div class='info'>$formatName</div>
-			<div class='label-wrap'>Brand:</div><div class='info'>$brandName</div>
-			<div class='label-wrap'>Size:</div><div class='info'>$size</div>
-			<div class='label-wrap'>finish:</div><div class='info'>$finishName</div>
-			<div class='label-wrap'>Overall H x W x D:</div><div class='info'>$dimension</div>
-			<div class='label-wrap'>Status:</div><div class='info'>$status</div>
-			<div class='label-wrap'>ID #:</div><div class='info'>" . str_pad($productId, 5, '0', STR_PAD_LEFT) ."</div>";
+			<div class='label-wrap'>Name: &nbsp </div><div class='info'>$productName</div><br>
+			<div class='label-wrap'>Code Name: &nbsp</div><div class='info'>$codeName</div><br>
+			<div class='label-wrap'>Region: &nbsp</div><div class='info'>$regionName</div><br>
+			<div class='label-wrap'>Format: &nbsp</div><div class='info'>$formatName</div><br>
+			<div class='label-wrap'>Brand: &nbsp</div><div class='info'>$brandName</div><br>
+			<div class='label-wrap'>Size: &nbsp</div><div class='info'>$size</div><br>
+			<div class='label-wrap'>finish: &nbsp</div><div class='info'>$finishName</div><br>
+			<div class='label-wrap'>Dimensions(HxWxD): &nbsp</div><div class='info'>$dimension</div><br>
+			<div class='label-wrap'>Status: &nbsp</div><div class='info'>$status</div><br>
+			<div class='label-wrap'>ID #: &nbsp</div><div class='info'>" . str_pad($productId, 5, '0', STR_PAD_LEFT) ."</div>";
 	}
 
 	return $output;
