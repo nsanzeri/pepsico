@@ -247,7 +247,7 @@ function getProductsMatchingRegion($regionName) {
 		$sql .= " AND products.brand_id IN (" . buildInString($brand) . " 0)";
 	}
 	if (!functionallyEmpty($size)){
-		$sql .= " AND " . buildInStringSize($size);
+		$sql .= " AND (" . buildInStringSize($size) . ")";
 	}
 	if (!functionallyEmpty($finish)){
 		$sql .= " AND products.finish_id IN (" . buildInString($finish) . " 0)";
