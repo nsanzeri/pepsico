@@ -3,14 +3,11 @@ $(document).ready(function(){
 	$( "#map_form" ).submit(function( event ) {
 		console.log("Size array  = " + JSON.stringify($("input[name='size_array[]']").serializeArray()));
 		console.log("Size array METRIC  = " + JSON.stringify($("input[name='size_metric_array[]']").serializeArray()));
-//		$("input[name='size_metric_array[]'").val($("input[name='size_array[]'").val());
-//		$("input[name='size_array[]'").val($("input[name='size_metric_array[]'").val());
 		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
 	    $("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='size']").val(JSON.stringify($("input[name='size_array[]']:checkbox:checked").serializeArray()));
-//	    $("input:hidden[name='size']").val(JSON.stringify($("input[name='size_metric_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='finish']").val(JSON.stringify($("input[name='finish_array[]']:checkbox:checked").serializeArray()));
 	});
 	$( "#grid_form" ).submit(function( event ) {
