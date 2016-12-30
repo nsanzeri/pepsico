@@ -18,6 +18,12 @@ if (isset($_POST['regionName'])) {
 	$regionName = $_POST['regionName'];
 }
 
+if (isset($_GET['metric'])) {
+	$showMetric = $_GET['metric'];
+} else if (isset($_POST['metric'])) {
+	$showMetric = $_POST['metric'];
+}
+
 if (isset($_GET['searchTerm'])) {
 	$searchTerm = $_GET['searchTerm'];
 } else if (isset($_POST['searchTerm'])) {

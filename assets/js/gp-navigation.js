@@ -4,6 +4,7 @@ $(document).ready(function(){
 		console.log("Size array  = " + JSON.stringify($("input[name='size_array[]']").serializeArray()));
 		console.log("Size array METRIC  = " + JSON.stringify($("input[name='size_metric_array[]']").serializeArray()));
 		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
+		$("input:hidden[name='metric']").val($("#showMetric").val());
 	    $("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
@@ -12,6 +13,7 @@ $(document).ready(function(){
 	});
 	$( "#grid_form" ).submit(function( event ) {
 		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
+		$("input:hidden[name='metric']").val($("#showMetric").val());
 		$("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
@@ -20,6 +22,7 @@ $(document).ready(function(){
 	});
 	$( "#gallery_form" ).submit(function( event ) {
 		$("input:hidden[name='searchTerm']").val($("#autocomplete").val());
+		$("input:hidden[name='metric']").val($("#showMetric").val());
 		$("input:hidden[name='region']").val(JSON.stringify($("input[name='region_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='format']").val(JSON.stringify($("input[name='format_array[]']:checkbox:checked").serializeArray()));
 	    $("input:hidden[name='brand']").val(JSON.stringify($("input[name='brand_array[]']:checkbox:checked").serializeArray()));
