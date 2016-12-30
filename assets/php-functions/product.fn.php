@@ -551,4 +551,4 @@ function prepareCriteriaSql(){
 	return $sql;
 }
 
-?>
+?> 
