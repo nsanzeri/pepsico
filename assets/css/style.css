@@ -3623,3 +3623,21 @@ File: Responsive
     display: none !important;
   }
 }
+
+#showSizeEnglish{
+	  background-image: url('../images/switch.png') ;
+	  background-repeat: no-repeat;
+	  line-height:4;
+	  margin-bottom:-45px;
+	  cursor:pointer;
+	  margin-left: 10px;
+}
+
+#showSizeMetric{
+	  background-image: url('../images/switch.png') ;
+	  background-repeat: no-repeat;
+	  line-height:4;
+	  margin-bottom:-45px;
+	  cursor:pointer;
+	  margin-left: 10px;
+}
