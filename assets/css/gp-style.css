@@ -145,12 +145,12 @@ a:hover {
 
 .floating-box-text {
 	display: inline-block;
-	width: 190px;
+	width: 200px;
 	height: 20px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	color: #fff;
-	margin-top: 4.7em;
-	padding-right:4em;
+	margin-top: 5.2em;
+	padding-right:4.5em;
 	/*padding-top:.7em;
 	border-top: 2px solid #f2f2f2;*/
 }
@@ -174,7 +174,7 @@ a:hover {
 }
 
 .floating-box-vr360 {
-	height: 450px;
+	height: 500px;
 	width: 300px;
 	display: inline-block;
 }

@@ -2825,7 +2825,7 @@ th {
 .table>thead>tr>th {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
+  /*vertical-align: top;*/
   border-top: 1px solid #ddd
 }
 
@@ -2870,7 +2870,8 @@ th {
 .table-bordered>tfoot>tr>th,
 .table-bordered>thead>tr>td,
 .table-bordered>thead>tr>th {
-  border: 1px solid #ddd
+  border: 1px solid #ddd;
+  width:10%;
 }
 
 .table-bordered>thead>tr>td,
@@ -7105,7 +7106,7 @@ button.close {
   padding: 15px;
 	float:right;
 	width:450px;
-	margin-top:100px;
+	margin-top:60px;
 }
 
 #product-dialog .modal-header ul {
