@@ -343,8 +343,8 @@ a:hover {
 }
 
 .box {
-	width: 15%;
-	height: 15%;
+	width: 1.6em;
+	height: 1.6em;
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -354,7 +354,7 @@ a:hover {
 	color: white;
 	font-size: 1.9em;
 	text-align: center;
-	line-height: 65px;
+	line-height: 45px;
 }
 
 #region-north-america {

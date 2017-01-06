@@ -7175,7 +7175,7 @@ button.close {
   padding: 15px;
   overflow-x: hidden;
   overflow-y: auto;
-  /*height:480px;*/
+  max-height:680px;
   float:left;
 }
 
