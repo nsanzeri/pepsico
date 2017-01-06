@@ -7106,7 +7106,7 @@ button.close {
   padding: 15px;
 	float:right;
 	width:450px;
-	margin-top:60px;
+	margin-top:40px;
 }
 
 #product-dialog .modal-header ul {
@@ -7168,7 +7168,8 @@ button.close {
 
 .modal-title {
   margin: 0;
-  line-height: 1.42857143
+  line-height: 1.42857143;
+  padding-top:15px;
 }
 
 .modal-body {

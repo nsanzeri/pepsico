@@ -440,9 +440,15 @@ font-size: 1em;
 }
 
 .product-details{
-text-align:center;
+text-align: center;
 font-family: bebasneue, Helvetica, sans-serif;
-color: #8c8f90;
-font-size: 2em;
-font-weight:bold;
+color: #ffffff;
+font-size: 1.7em;
+font-weight: bold;
+padding: 10px;
+margin-bottom: 15px;
+background-color: #03a9f4;
+width: 350px;
+margin: 0 auto;
+letter-spacing: 2px;
 }
