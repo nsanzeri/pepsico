@@ -359,32 +359,32 @@ a:hover {
 
 #region-north-america {
 	top: 20%;
-	left: 4%;
+	left: 9%;
 }
 
 #region-south-america {
 	top: 55%;
-	left: 15%;
+	left: 20%;
 }
 
 #region-asia {
 	top: 20%;
-	left: 70%;
+	left: 74%;
 }
 
 #region-africa {
 	top: 45%;
-	left: 43%;
+	left: 46%;
 }
 
 #region-australia {
 	top: 70%;
-	left: 78%;
+	left: 84%;
 }
 
 #region-europe {
 	top: 13%;
-	left: 45%;
+	left: 47%;
 }
 
 /*-- search stying override of jquery --*/
