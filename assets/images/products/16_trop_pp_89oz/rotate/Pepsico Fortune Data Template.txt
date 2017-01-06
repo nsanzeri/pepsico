@@ -1,0 +1,25 @@
+Naming Convention : Trop_PP_89_2016
+
+Name : Trop_PP_89oz_2016
+
+Codename : 
+
+Region :
+
+Brand : Tropicana Pure Premium
+
+Package : Bottle
+
+Volume : 89oz; 2.63L
+
+Finish : Custom
+
+Height : 10.35 in
+
+Width : 6.44 in
+
+Depth : 4.183 in
+
+Status :
+
+ID # :

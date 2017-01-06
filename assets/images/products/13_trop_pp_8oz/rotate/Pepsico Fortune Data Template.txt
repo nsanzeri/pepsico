@@ -1,0 +1,25 @@
+Naming Convention : Trop_PP_89_2016
+
+Name : Trop_Pure Premium_8oz_2016
+
+Codename : 
+
+Region :
+
+Brand : Tropicana Pure Premium
+
+Package : Bottle
+
+Volume : 8oz; 240mL
+
+Finish :
+
+Height : 4.28 in
+
+Width : 2.38 in
+
+Depth : 2.33 in
+
+Status :
+
+ID # :

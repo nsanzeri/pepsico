@@ -1,0 +1,25 @@
+Naming Convention : Trop_PP_89_2016
+
+Name : Naked_64oz_2016
+
+Codename : 
+
+Region :
+
+Brand : Naked
+
+Package : Bottle
+
+Volume : 64oz; 1.89L
+
+Finish :
+
+Height : 10.4 in
+
+Width : 4.05 in
+
+Depth : 4.08 in
+
+Status :
+
+ID # :

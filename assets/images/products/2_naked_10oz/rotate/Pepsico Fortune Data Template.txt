@@ -1,0 +1,25 @@
+Naming Convention : Trop_PP_89_2016
+
+Name : Naked_10oz_2016
+
+Codename : 
+
+Region :
+
+Brand : Naked
+
+Package : Bottle
+
+Volume : 10oz; 296mL
+
+Finish :
+
+Height : 5.16 in
+
+Width : 2.35 in
+
+Depth : 2.42 in
+
+Status :
+
+ID # :

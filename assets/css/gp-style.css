@@ -61,10 +61,10 @@ form {
 	display: inline-block;
 	background-color: #fff;
 	width: 200px;
-	height: 200px;
+	height: 230px;
 	margin: 20px;
 	position: relative;
-	padding: 50px;
+	padding: 40px;
 	text-align: center;
 	-webkit-transition: all 200ms ease-in;
 	-webkit-transform: scale(1);
@@ -145,11 +145,12 @@ a:hover {
 
 .floating-box-text {
 	display: inline-block;
-	width: 90px;
+	width: 190px;
 	height: 20px;
 	font-size: 1.2em;
 	color: #fff;
-	margin-top: 2.5em;
+	margin-top: 4.7em;
+	padding-right:4em;
 	/*padding-top:.7em;
 	border-top: 2px solid #f2f2f2;*/
 }
@@ -161,7 +162,7 @@ a:hover {
 }
 
 .floating-box-image {
-	width: 73px;
+	width: 100px;
 	height: 75px;
 	margin: 0 auto;
 }
