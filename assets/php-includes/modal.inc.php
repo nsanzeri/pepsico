@@ -40,7 +40,7 @@
 				<div id="gp-modal-product"></div>
 			</div>				
 			<div class="modal-header">
-			<div class="product-details">Product details</div>
+			<div class="product-details">Package details</div>
 				<h4 class="modal-title" id="gp-modal-product-label">
 				</h4>
 				
