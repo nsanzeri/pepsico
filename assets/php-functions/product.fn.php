@@ -56,6 +56,8 @@ function getSingleProduct($prodId) {
 				products.name AS productName, 
 				products.code_name AS codeName,
 				products.dimension AS dimension,
+				products.material AS material,
+				products.weight AS weight,
 				products.size AS size,
 				products.status AS status,
 				products.description AS description,
@@ -90,6 +92,8 @@ function getSingleProduct($prodId) {
 		$size = $row -> size;
 		$finishName = $row -> finishName;
 		$dimension = $row -> dimension;
+		$material = $row -> material;
+		$weight = $row -> weight;
 		$description = $row -> description;
 		$status = $row -> status;
 
@@ -108,11 +112,13 @@ function getSingleProduct($prodId) {
 			<div class='label-wrap'>Format: &nbsp</div><div class='info'>$formatName</div><br>
 			<div class='label-wrap'>Brand: &nbsp</div><div class='info'>$brandName</div><br>
 			<div class='label-wrap'>Size: &nbsp</div><div class='info'>$size</div><br>
+			<div class='label-wrap'>Material: &nbsp</div><div class='info'>$material</div><br>
+			<div class='label-wrap'>Weight: &nbsp</div><div class='info'>$weight</div><br>
 			<div class='label-wrap'>finish: &nbsp</div><div class='info'>$finishName</div><br>
 			<div class='label-wrap'>Dimensions(HxWxD): &nbsp</div><div class='info'>$dimension</div><br>
 			<div class='label-wrap'>Status: &nbsp</div><div class='info'>$status</div><br>
 			<div class='label-wrap'>ID #: &nbsp</div><div class='info'>" . str_pad($productId, 5, '0', STR_PAD_LEFT) ."</div>";
-	}
+		}
 
 	return $output;
 }
