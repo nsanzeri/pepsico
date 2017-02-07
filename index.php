@@ -103,7 +103,7 @@ require_once 'head.inc.php';
                 
                 <!-- Start footer -->
                 <footer class="footer">
-                    © PepsiCo 2016 All Rights Reserved. 
+                    © PepsiCo 2017 All Rights Reserved. 
                 </footer>
                 <!-- end footer -->   
                 
