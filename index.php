@@ -4,6 +4,7 @@ set_include_path ( './assets/php-includes' . PATH_SEPARATOR . './assets/php-func
 // Function
 require_once 'filter.fn.php';
 require_once 'product.fn.php';
+require_once 'admin.fn.php';
 
 // Includes
 require_once 'connect-local.inc.php';
@@ -47,7 +48,12 @@ require_once 'head.inc.php';
 
 
             <!-- ========== Left Sidebar Start ========== -->
-   			<?php require_once 'left-sidebar.inc.php'; ?>
+            						
+   			<?php 
+   			if ($page!="admin") {
+   				require_once 'left-sidebar.inc.php';
+   			} 
+   			?>
             <!-- Left Sidebar End -->
 
             
@@ -93,7 +99,10 @@ require_once 'head.inc.php';
 						if ($page=="gallery") {
 							include 'content-gallery.inc.php';
 						}
-						
+
+						if ($page=="admin") {
+							include 'admin-products.inc.php';
+						}						
 						?>
                             
                     </div> <!-- container -->

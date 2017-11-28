@@ -3630,19 +3630,15 @@ File: Responsive
 }
 
 #showSizeEnglish{
-	  background-image: url('../images/switch.png') ;
 	  background-repeat: no-repeat;
-	  line-height:4;
-	  margin-bottom:-45px;
+	  margin-bottom:-30px;
 	  cursor:pointer;
 	  margin-left: 10px;
 }
 
 #showSizeMetric{
-	  background-image: url('../images/switch.png') ;
 	  background-repeat: no-repeat;
-	  line-height:4;
-	  margin-bottom:-45px;
+	  margin-bottom:-30px;
 	  cursor:pointer;
 	  margin-left: 10px;
 }
