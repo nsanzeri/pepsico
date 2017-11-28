@@ -12,7 +12,7 @@ form {
 }
 
 #content-map {
-	background-image: url(../images/map-blue.png);
+	background-image: url(../images/map-color.png);
 	background-size: cover;
 	width: calc(100% * .90);
 	padding: 0;
@@ -349,7 +349,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-size: contain;
 	position: absolute;
-	background-image: url('../images/marker.png');
+	/*background-image: url('../images/marker.png');*/
 	cursor: pointer;
 	color: white;
 	font-size: 1.9em;
@@ -373,8 +373,9 @@ a:hover {
 }
 
 #region-africa {
-	top: 45%;
-	left: 46%;
+	/*top: 45%;
+	left: 46%;*/
+	background-image: url('../images/marker.png');
 }
 
 #region-australia {

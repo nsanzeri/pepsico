@@ -1490,6 +1490,11 @@ File: Components
 .panel .panel-body {
   padding-top: 4em;
   padding-bottom: 4em;
+  background-color: #2a323c;
+}
+.panel .panel-body-white {
+  padding-top: 4em;
+  padding-bottom: 4em;
   background-color: #ffffff;
 }
 .panel-heading {
