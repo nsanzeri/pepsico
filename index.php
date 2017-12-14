@@ -25,6 +25,14 @@ require_once 'head.inc.php';
                 <!-- Button mobile view to collapse sidebar menu -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
+                    			<!-- Start Menu -->
+                                    <ol class="breadcrumb pull-right">
+                                    	<?php require_once 'menu.inc.php'; ?>
+										<!-- <li class="active"><a href="index.html">Map</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+ 									--></ol>
+                                <!-- end Menu -->
                         <div class="">
                             <div class="pull-left">
                                 <button type="button" class="button-menu-mobile open-left waves-effect waves-light">
@@ -66,22 +74,7 @@ require_once 'head.inc.php';
                     
                     <div class="container">
                         <!-- Page-Title -->
-                     
-                            <div class="col-sm-12">
-                                <div class="page-header-title">
-                                    <h4 class="pull-left page-title"></h4>
-									<!-- Start Menu -->
-                                    <ol class="breadcrumb pull-right">
-                                    	<?php require_once 'menu.inc.php'; ?>
-<!--                                         <li class="active"><a href="index.html">Map</a></li>
-                                        <li><a href="grid.html">Grid</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
- -->                                    </ol>
-                                    <!-- end Menu -->
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                     
+                    
                         <!-- Include content based on page -->
                         <?php require_once 'modal.inc.php';?>
                         
@@ -112,7 +105,7 @@ require_once 'head.inc.php';
                 
                 <!-- Start footer -->
                 <footer class="footer">
-                    © PepsiCo 2017 All Rights Reserved. 
+                    © PepsiCo 2018 All Rights Reserved. 
                 </footer>
                 <!-- end footer -->   
                 
