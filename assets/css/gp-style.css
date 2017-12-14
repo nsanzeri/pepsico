@@ -108,12 +108,12 @@ form {
 	border-width: 0 22px 22px 0;
 	border-style: solid;
 	border-color: #00a9e2 #f2f2f2;
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px
+	/*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px
 		rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px
 		rgba(0, 0, 0, 0.2);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), -1px 1px 1px
-		rgba(0, 0, 0, 0.2);
+		rgba(0, 0, 0, 0.2);*/
 }
 
 .floating-box.rounded {
@@ -126,9 +126,9 @@ form {
 	position: absolute;
 	top: 0;
 	right: 0;
-	border-width: 18px;
+	border-width: 12px;
 	border-color: #f2f2f2 #f2f2f2 transparent transparent;
-	background: #00a9e2;
+	background: #dadada;
 	-moz-border-radius: 0 0 0 5px;
 	border-radius: 0 0 0 5px;
 	display: block;
@@ -344,49 +344,54 @@ a:hover {
 }
 
 .box {
-	width: 1.6em;
-	height: 1.6em;
+	width: 2.5em;
+	height: 2.5em;
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	position: absolute;
-	/*background-image: url('../images/marker.png');*/
 	cursor: pointer;
-	color: white;
+	color: #3B85A5;
 	font-size: 1.9em;
+    font-weight: bold;
 	text-align: center;
-	line-height: 45px;
+	line-height: 57px;
 }
 
 #region-north-america {
-	top: 20%;
-	left: 9%;
+	top: 30%;
+	left: 15%;
+	background-image: url('../images/pin6.png');
 }
 
 #region-south-america {
-	top: 55%;
-	left: 20%;
+	top: 60%;
+	left: 28%;
+	background-image: url('../images/pin6.png');
 }
 
 #region-asia {
-	top: 20%;
-	left: 74%;
+	top: 35%;
+	left: 72%;
+	background-image: url('../images/pin6.png');
 }
 
 #region-africa {
-	/*top: 45%;
-	left: 46%;*/
-	background-image: url('../images/marker.png');
+	top: 45%;
+	left: 48%;
+	background-image: url('../images/pin6.png');
 }
 
 #region-australia {
-	top: 70%;
-	left: 84%;
+	top: 68%;
+	left: 81%;
+	background-image: url('../images/pin6.png');
 }
 
 #region-europe {
-	top: 13%;
-	left: 47%;
+	top: 22%;
+	left: 55%;
+	background-image: url('../images/pin6.png');
 }
 
 /*-- search stying override of jquery --*/
