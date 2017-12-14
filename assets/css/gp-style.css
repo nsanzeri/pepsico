@@ -356,7 +356,15 @@ a:hover {
     font-weight: bold;
 	text-align: center;
 	line-height: 57px;
+	transition: transform .2s;
 }
+
+.box:hover {
+	transform: scale(1.1);
+	/*-webkit-transform: scale(1.05);
+ 	transform: scale(1.05);*/
+}
+
 
 #region-north-america {
 	top: 30%;
