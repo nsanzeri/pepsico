@@ -234,7 +234,7 @@ a:hover {
 }
 
 #product-dialog {
-	height: 900px;
+	height: 100%;
 	width: 100%;
 	position: absolute;
 	margin: 0px auto;

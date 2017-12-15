@@ -7077,7 +7077,7 @@ button.close {
 	min-width:100px;
 	display:table;
   margin: 0 auto;
-	margin-top:50px;
+	margin-top:80px;
 	padding: 20px 20px 20px 20px;
 }
 
@@ -7094,12 +7094,13 @@ button.close {
   box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 	overflow-x: hidden;
   overflow-y: auto;
-	max-width: 75%;
-	min-width:100px;
+	max-width: 100%;
+	min-width:800px;
 	display:table;
   margin: 0 auto;
-	margin-top:200px;
+	margin-top:250px;
 }
+
 
 
 #product-dialog .modal-header {

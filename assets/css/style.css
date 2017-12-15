@@ -523,7 +523,7 @@ a:focus {
   padding: 0 0 10px 0;
 }
 .modal /*.modal-dialog .modal-content*/ .modal-body {
-  padding: 0px 0;
+  padding: 60px 60px;
   background-color:#f2f2f2;
 
 }
