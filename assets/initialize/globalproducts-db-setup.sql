@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 06:17 PM
+-- Generation Time: Dec 19, 2017 at 09:11 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -171,12 +171,12 @@ CREATE TABLE `region` (
 
 INSERT INTO `region` (`region_id`, `name`, `description`, `is_active`) VALUES
 (1, 'N/A', 'N/A', 1),
-(2, 'Africa', 'Africa', 1),
-(3, 'Asia', 'China', 1),
-(4, 'Australia', 'Australia', 1),
-(5, 'Europe', 'Europe', 1),
-(6, 'North America', 'North America', 1),
-(7, 'South America', 'South America', 1);
+(2, 'wesa', 'wesa', 1),
+(3, 'china', 'china', 1),
+(4, 'apac', 'apac', 1),
+(5, 'eer', 'eer', 1),
+(6, 'nab', 'nab', 1),
+(7, 'lab', 'lab', 1);
 
 -- --------------------------------------------------------
 

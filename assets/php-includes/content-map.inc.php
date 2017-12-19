@@ -11,7 +11,7 @@
 			</div>
 			<div class="panel-body">
 				<div class="map">
-					<img src="assets/images/map-color2.png" alt="Map">
+					<img src="assets/images/map-color3.png" alt="Map">
 					<?php echo getRegionCounts(); ?>
 				</div>
 			</div>

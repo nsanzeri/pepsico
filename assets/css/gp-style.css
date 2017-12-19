@@ -351,7 +351,6 @@ a:hover {
 	background-size: contain;
 	position: absolute;
 	cursor: pointer;
-	color: #3B85A5;
 	font-size: 1.9em;
     font-weight: bold;
 	text-align: right;
@@ -366,41 +365,52 @@ a:hover {
 }
 
 
-#region-north-america {
+#region-nab {
 	top: 32%;
 	left: 15%;
 	background-image: url('../images/pin_nab.png');
 	padding-right:15px;
+	color: #00B3EB;
 }
 
-#region-south-america {
+#region-lab {
 	top: 60%;
 	left: 28%;
-	background-image: url('../images/pin_.png');
+	background-image: url('../images/pin_lab.png');
+	padding-right:15px;
+	color: #F18C3F;
 }
 
-#region-asia {
+#region-china {
 	top: 35%;
 	left: 72%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_china.png');
+	padding-right:15px;
+	color: #0F5979;
 }
 
-#region-africa {
+#region-wesa {
 	top: 45%;
 	left: 48%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_wesa.png');
+	padding-right:15px;
+	color: #F2D465;
 }
 
-#region-australia {
+#region-apac {
 	top: 68%;
 	left: 81%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_apac.png');
+	padding-right:15px;
+	color: #7E6E97;
 }
 
-#region-europe {
+#region-eer {
 	top: 22%;
 	left: 55%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_eer.png');
+	padding-right:15px;
+	color: #CE4F3E;
 }
 
 /*-- search stying override of jquery --*/
