@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2017 at 06:39 PM
+-- Generation Time: Dec 19, 2017 at 06:17 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -19,6 +19,78 @@ SET time_zone = "+00:00";
 --
 -- Database: `globalproducts`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `brand`
+--
+
+CREATE TABLE `brand` (
+  `brand_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `brand`
+--
+
+INSERT INTO `brand` (`brand_id`, `name`, `description`, `is_active`) VALUES
+(1, 'N/A', 'N/A', 1),
+(2, 'Tropicana', 'Tropicana', 1),
+(3, 'Pomi', 'Pomi', 1),
+(4, 'Alvalle', 'Alvalle', 1),
+(5, 'Naked', 'Naked', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `finish`
+--
+
+CREATE TABLE `finish` (
+  `finish_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `finish`
+--
+
+INSERT INTO `finish` (`finish_id`, `name`, `description`, `is_active`) VALUES
+(1, 'N/A', 'N/A', 1),
+(2, '28', '28', 1),
+(3, '33-38', '33-38', 1),
+(4, '43', '43', 1),
+(5, 'Custom', 'Custom', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `format`
+--
+
+CREATE TABLE `format` (
+  `format_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `format`
+--
+
+INSERT INTO `format` (`format_id`, `name`, `description`, `is_active`) VALUES
+(1, 'N/A', 'N/A', 1),
+(2, 'Bottle', 'Bottle', 1),
+(3, 'Pouch', 'Pouch', 1),
+(4, 'Tetra', 'Tetra', 1),
+(5, 'Cup', 'Cup', 1);
 
 -- --------------------------------------------------------
 
@@ -80,9 +152,82 @@ INSERT INTO `products` (`prod_id`, `name`, `code_name`, `dimension`, `size`, `st
 (28, 'Trop 50 67oz', 'N/A', '9.8in X 4in', 2, 'Active', 'Product desc', 'assets/images/products', '28.jpg', 3, 4, 2, 3, 1, '', ''),
 (29, 'Kavita 15oz', 'N/A', '1in x 2in x 3in', 13, 'Active', 'Product Desc', 'assets/images/products', '29.jpg', 4, 2, 5, 2, 1, NULL, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `region`
+--
+
+CREATE TABLE `region` (
+  `region_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `region`
+--
+
+INSERT INTO `region` (`region_id`, `name`, `description`, `is_active`) VALUES
+(1, 'N/A', 'N/A', 1),
+(2, 'Africa', 'Africa', 1),
+(3, 'Asia', 'China', 1),
+(4, 'Australia', 'Australia', 1),
+(5, 'Europe', 'Europe', 1),
+(6, 'North America', 'North America', 1),
+(7, 'South America', 'South America', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `size`
+--
+
+CREATE TABLE `size` (
+  `size_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `name_metric` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `lower_range` int(11) NOT NULL,
+  `upper_range` int(11) NOT NULL,
+  `is_active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `size`
+--
+
+INSERT INTO `size` (`size_id`, `name`, `name_metric`, `description`, `lower_range`, `upper_range`, `is_active`) VALUES
+(1, 'N/A', 'N/A', 'N/A', -1, -1, 1),
+(2, '0-12 oz', '0-355ml', '0-12 oz', 0, 12, 1),
+(3, '13-20 oz', '385-592ml', '13-20 oz', 13, 20, 1),
+(4, '21-48 oz', '621-1420ml', '21-48 oz', 21, 48, 1),
+(5, '49-64 oz', '1449-1892ml', '49-64 oz', 49, 64, 1),
+(6, '65-89 oz', '1922-2632ml', '65-89 oz', 65, 89, 1),
+(7, '90+ oz', '2661ml +', '90-999 oz', 90, 99999, 1);
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `brand`
+--
+ALTER TABLE `brand`
+  ADD PRIMARY KEY (`brand_id`);
+
+--
+-- Indexes for table `finish`
+--
+ALTER TABLE `finish`
+  ADD PRIMARY KEY (`finish_id`);
+
+--
+-- Indexes for table `format`
+--
+ALTER TABLE `format`
+  ADD PRIMARY KEY (`format_id`);
 
 --
 -- Indexes for table `products`
@@ -91,14 +236,51 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`prod_id`);
 
 --
+-- Indexes for table `region`
+--
+ALTER TABLE `region`
+  ADD PRIMARY KEY (`region_id`);
+
+--
+-- Indexes for table `size`
+--
+ALTER TABLE `size`
+  ADD PRIMARY KEY (`size_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `brand`
+--
+ALTER TABLE `brand`
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `finish`
+--
+ALTER TABLE `finish`
+  MODIFY `finish_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `format`
+--
+ALTER TABLE `format`
+  MODIFY `format_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+--
+-- AUTO_INCREMENT for table `region`
+--
+ALTER TABLE `region`
+  MODIFY `region_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `size`
+--
+ALTER TABLE `size`
+  MODIFY `size_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

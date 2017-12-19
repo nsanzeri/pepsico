@@ -344,7 +344,7 @@ a:hover {
 }
 
 .box {
-	width: 2.5em;
+	width: 6em;
 	height: 2.5em;
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -354,8 +354,8 @@ a:hover {
 	color: #3B85A5;
 	font-size: 1.9em;
     font-weight: bold;
-	text-align: center;
-	line-height: 57px;
+	text-align: right;
+	line-height: 44px;
 	transition: transform .2s;
 }
 
@@ -367,15 +367,16 @@ a:hover {
 
 
 #region-north-america {
-	top: 30%;
+	top: 32%;
 	left: 15%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_nab.png');
+	padding-right:15px;
 }
 
 #region-south-america {
 	top: 60%;
 	left: 28%;
-	background-image: url('../images/pin6.png');
+	background-image: url('../images/pin_.png');
 }
 
 #region-asia {
