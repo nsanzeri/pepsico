@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 10:12 PM
+-- Generation Time: Dec 19, 2017 at 11:28 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -134,7 +134,7 @@ INSERT INTO `products` (`prod_id`, `name`, `code_name`, `dimension`, `size`, `st
 (10, 'Trop 64oz', 'N/A', '10.5in X 4.4in x 3.5in', 64, 'Active', 'Product desc', 'assets/images/products', '10.jpg', 7, 2, 2, 3, 1, '', ''),
 (11, 'Trop 96oz', 'N/A', '11.6in X 5.4in x 5.4in', 96, 'Active', 'Product desc', 'assets/images/products', '11.jpg', 6, 2, 2, 5, 1, '', ''),
 (12, 'Trop Farm 46oz', 'N/A', '9.95in X 4.156in x 3.23in', 46, 'Active', 'Product desc', 'assets/images/products', '12.jpg', 4, 2, 2, 2, 1, '', ''),
-(13, 'Trop PP 8oz', 'N/A', '4.28in X 2.38in x 2.33in', 8, 'Active', 'Product desc', 'assets/images/products', '13.jpg', 3, 4, 2, 4, 1, '', ''),
+(13, 'Trop PP 8oz', 'N/A', '4.28in X 2.38in x 2.33in', 8, 'Active', 'Product desc', 'assets/images/products', '13.jpg', 9, 4, 2, 4, 1, '', ''),
 (14, 'Trop PP 12oz', 'N/A', '7.29in X 2.34in x 2.34in', 12, 'Active', 'Product desc', 'assets/images/products', '14.jpg', 6, 2, 2, 3, 1, '', ''),
 (15, 'Trop PP 59oz', 'N/A', '10in X 4.5in x 4.26in', 59, 'Active', 'Product desc', 'assets/images/products', '15.jpg', 6, 2, 2, 3, 1, '', ''),
 (16, 'Trop PP 89oz', 'N/A', '10.35in X 6.44in x 4.183in', 89, 'Active', 'Product desc', 'assets/images/products', '16.jpg', 5, 2, 2, 2, 1, '', ''),
@@ -143,7 +143,7 @@ INSERT INTO `products` (`prod_id`, `name`, `code_name`, `dimension`, `size`, `st
 (19, 'Trop PP 150ml', 'N/A', '3.9in X 2in x 2in', 150, 'Active', 'Product desc', 'assets/images/products', '19.jpg', 5, 5, 2, 2, 1, '', ''),
 (20, 'Trop PP 850ml', 'N/A', '9.2in X 2.7in x 2.7in', 850, 'Active', 'Product desc', 'assets/images/products', '20.jpg', 6, 4, 2, 2, 1, '', ''),
 (21, 'Trop Twister 20oz', 'N/A', '8.23in X 2.75in x 2.75in', 20, 'Active', 'Product desc', 'assets/images/products', '21.jpg', 5, 2, 2, 4, 1, '', ''),
-(22, 'Trop Twister 59oz', 'N/A', '9.31in X 4.38in x 4.38in', 59, 'Active', 'Product desc', 'assets/images/products', '22.jpg', 3, 4, 2, 3, 1, '', ''),
+(22, 'Trop Twister 59oz', 'N/A', '9.31in X 4.38in x 4.38in', 59, 'Active', 'Product desc', 'assets/images/products', '22.jpg', 8, 4, 2, 3, 1, '', ''),
 (23, 'Copella 50oz', 'N/A', '10.3in X 3.7in', 2, 'Active', 'Product desc', 'assets/images/products', '23.jpg', 3, 4, 2, 3, 1, '', ''),
 (24, 'Copella 10oz', 'N/A', '6.5in X 2.1in', 300, 'Active', 'Product desc', 'assets/images/products', '24.jpg', 3, 4, 2, 3, 1, '', ''),
 (25, 'Copella 900ml', 'N/A', '10.3in X 3.7in', 900, 'Active', 'Product desc', 'assets/images/products', '25.jpg', 3, 4, 2, 3, 1, '', ''),

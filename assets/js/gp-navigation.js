@@ -69,6 +69,12 @@ $(document).ready(function(){
    }); 
    $('#region-eer').on('click', function() {
 	   callRegionalAjax("EER");
+   });
+   $('#region-mena').on('click', function() {
+	   callRegionalAjax("MENA");
+   }); 
+   $('#region-india').on('click', function() {
+	   callRegionalAjax("India");
    }); 
    // AJAX map clicks - END
    

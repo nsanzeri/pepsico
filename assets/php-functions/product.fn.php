@@ -416,6 +416,12 @@ function getRegionCounts() {
 			if ($name == "EER" && $count > 0) {
 				$output .= '<div id="region-eer"' . getStylingClasses(). '>' . $count . '</div>';
 			}
+			if ($name == "MENA" && $count > 0) {
+				$output .= '<div id="region-mena"' . getStylingClasses(). '>' . $count . '</div>';
+			}
+			if ($name == "India" && $count > 0) {
+				$output .= '<div id="region-india"' . getStylingClasses(). '>' . $count . '</div>';
+			}
 		}
 	} else {
 		if ($page == 'map'){
@@ -462,6 +468,12 @@ function getRegionCounts() {
 			}
 			if ($name == "EER" && $count > 0) {
 				$output .= '<div id="region-eer"' . getStylingClasses(). '>' . $count . '</div>';
+			}
+			if ($name == "MENA" && $count > 0) {
+				$output .= '<div id="region-mena"' . getStylingClasses(). '>' . $count . '</div>';
+			}
+			if ($name == "India" && $count > 0) {
+				$output .= '<div id="region-india"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 		}
 	}

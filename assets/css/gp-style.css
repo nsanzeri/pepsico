@@ -358,6 +358,7 @@ a:hover {
 	transition: transform .2s;
 }
 
+
 .box:hover {
 	transform: scale(1.1);
 	/*-webkit-transform: scale(1.05);
@@ -382,7 +383,7 @@ a:hover {
 }
 
 #region-china {
-	top: 39%;
+	top: 38%;
 	left: 72%;
 	background-image: url('../images/pin_china.png');
 	padding-right:13px;
@@ -411,6 +412,22 @@ a:hover {
 	background-image: url('../images/pin_eer.png');
 	padding-right:13px;
 	color: #CE4F3E;
+}
+
+#region-mena {
+	top: 43%;
+	left: 52%;
+	background-image: url('../images/pin_mena.png');
+	padding-right:13px;
+	color: #90B954;
+}
+
+#region-india {
+	top: 46%;
+	left: 65%;
+	background-image: url('../images/pin_india.png');
+	padding-right:13px;
+	color: #8C8C8C;
 }
 
 /*-- search stying override of jquery --*/
