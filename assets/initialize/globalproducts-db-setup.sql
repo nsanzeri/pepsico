@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 09:11 PM
+-- Generation Time: Dec 19, 2017 at 10:12 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -171,12 +171,14 @@ CREATE TABLE `region` (
 
 INSERT INTO `region` (`region_id`, `name`, `description`, `is_active`) VALUES
 (1, 'N/A', 'N/A', 1),
-(2, 'wesa', 'wesa', 1),
-(3, 'china', 'china', 1),
-(4, 'apac', 'apac', 1),
-(5, 'eer', 'eer', 1),
-(6, 'nab', 'nab', 1),
-(7, 'lab', 'lab', 1);
+(2, 'WESA', 'WESA', 1),
+(3, 'China', 'China', 1),
+(4, 'APAC', 'APAC', 1),
+(5, 'EER', 'EER', 1),
+(6, 'NAB', 'NAB', 1),
+(7, 'LAB', 'LAB', 1),
+(8, 'MENA', 'MENA', 1),
+(9, 'India', 'India', 1);
 
 -- --------------------------------------------------------
 
@@ -275,7 +277,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `region`
 --
 ALTER TABLE `region`
-  MODIFY `region_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `region_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `size`
 --

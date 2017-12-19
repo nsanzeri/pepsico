@@ -52,23 +52,23 @@ $(document).ready(function(){
     });
 
    // AJAX map clicks - retrieve region specific list for display
-   $('#region-africa').on('click', function() {
-	   callRegionalAjax("Africa");
+   $('#region-wesa').on('click', function() {
+	   callRegionalAjax("WESA");
    }); 
-   $('#region-asia').on('click', function() {
-	   callRegionalAjax("Asia");
+   $('#region-china').on('click', function() {
+	   callRegionalAjax("China");
    }); 
-   $('#region-australia').on('click', function() {
-	   callRegionalAjax("Australia");
+   $('#region-apac').on('click', function() {
+	   callRegionalAjax("APAC");
    }); 
-   $('#region-north-america').on('click', function() {
-	   callRegionalAjax("North America");
+   $('#region-nab').on('click', function() {
+	   callRegionalAjax("NAB");
    }); 
-   $('#region-south-america').on('click', function() {
-	   callRegionalAjax("South America");
+   $('#region-lab').on('click', function() {
+	   callRegionalAjax("LAB");
    }); 
-   $('#region-europe').on('click', function() {
-	   callRegionalAjax("Europe");
+   $('#region-eer').on('click', function() {
+	   callRegionalAjax("EER");
    }); 
    // AJAX map clicks - END
    

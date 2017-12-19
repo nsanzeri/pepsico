@@ -351,10 +351,10 @@ a:hover {
 	background-size: contain;
 	position: absolute;
 	cursor: pointer;
-	font-size: 1.9em;
+	font-size: 1.5em;
     font-weight: bold;
 	text-align: right;
-	line-height: 44px;
+	line-height: 35px;
 	transition: transform .2s;
 }
 
@@ -369,47 +369,47 @@ a:hover {
 	top: 32%;
 	left: 15%;
 	background-image: url('../images/pin_nab.png');
-	padding-right:15px;
+	padding-right:11px;
 	color: #00B3EB;
 }
 
 #region-lab {
-	top: 60%;
-	left: 28%;
+	top: 63%;
+	left: 27%;
 	background-image: url('../images/pin_lab.png');
-	padding-right:15px;
+	padding-right:13px;
 	color: #F18C3F;
 }
 
 #region-china {
-	top: 35%;
+	top: 39%;
 	left: 72%;
 	background-image: url('../images/pin_china.png');
-	padding-right:15px;
+	padding-right:13px;
 	color: #0F5979;
 }
 
 #region-wesa {
-	top: 45%;
-	left: 48%;
+	top: 59%;
+	left: 49%;
 	background-image: url('../images/pin_wesa.png');
-	padding-right:15px;
+	padding-right:13px;
 	color: #F2D465;
 }
 
 #region-apac {
-	top: 68%;
-	left: 81%;
+	top: 57%;
+	left: 77%;
 	background-image: url('../images/pin_apac.png');
-	padding-right:15px;
+	padding-right:13px;
 	color: #7E6E97;
 }
 
 #region-eer {
 	top: 22%;
-	left: 55%;
+	left: 62%;
 	background-image: url('../images/pin_eer.png');
-	padding-right:15px;
+	padding-right:13px;
 	color: #CE4F3E;
 }
 

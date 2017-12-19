@@ -398,22 +398,22 @@ function getRegionCounts() {
 			$name = $row->name;
 			$regionId = $row->region_id;
 			$count = getCount ( 'region', $regionId );
-			if ($name == "wesa" && $count > 0) {
+			if ($name == "WESA" && $count > 0) {
 				$output .= '<div id="region-wesa"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "nab" && $count > 0) {
+			if ($name == "NAB" && $count > 0) {
 				$output .= '<div id="region-nab"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "lab" && $count > 0) {
+			if ($name == "LAB" && $count > 0) {
 				$output .= '<div id="region-lab"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "apac" && $count > 0) {
+			if ($name == "APAC" && $count > 0) {
 				$output .= '<div id="region-apac"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "china" && $count > 0) {
+			if ($name == "China" && $count > 0) {
 				$output .= '<div id="region-china"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "eer" && $count > 0) {
+			if ($name == "EER" && $count > 0) {
 				$output .= '<div id="region-eer"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 		}
@@ -445,22 +445,22 @@ function getRegionCounts() {
 			while ( $row = $result->fetch_object () ) {
 				$name = $row->name;
 			}
-			if ($name == "wesa" && $count > 0) {
+			if ($name == "WESA" && $count > 0) {
 				$output .= '<div id="region-wesa"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "nab" && $count > 0) {
+			if ($name == "NAB" && $count > 0) {
 				$output .= '<div id="region-nab"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "lab" && $count > 0) {
+			if ($name == "LAB" && $count > 0) {
 				$output .= '<div id="region-lab"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "apac" && $count > 0) {
+			if ($name == "APAC" && $count > 0) {
 				$output .= '<div id="region-apac"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "china" && $count > 0) {
+			if ($name == "China" && $count > 0) {
 				$output .= '<div id="region-china"' . getStylingClasses(). '>' . $count . '</div>';
 			}
-			if ($name == "eer" && $count > 0) {
+			if ($name == "EER" && $count > 0) {
 				$output .= '<div id="region-eer"' . getStylingClasses(). '>' . $count . '</div>';
 			}
 		}
