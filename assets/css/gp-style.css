@@ -368,64 +368,64 @@ a:hover {
 #region-nab {
 	top: 32%;
 	left: 15%;
-	background-image: url('../images/pin_nab.png');
-	padding-right:11px;
+	background-image: url('../images/pin_nab2.png');
+	padding-right:19px;
 	color: #00B3EB;
 }
 
 #region-lab {
 	top: 63%;
 	left: 27%;
-	background-image: url('../images/pin_lab.png');
-	padding-right:13px;
+	background-image: url('../images/pin_lab2.png');
+	padding-right:19px;
 	color: #F18C3F;
 }
 
 #region-china {
 	top: 38%;
 	left: 72%;
-	background-image: url('../images/pin_china.png');
-	padding-right:13px;
+	background-image: url('../images/pin_china2.png');
+	padding-right:19px;
 	color: #0F5979;
 }
 
 #region-wesa {
 	top: 59%;
 	left: 49%;
-	background-image: url('../images/pin_wesa.png');
-	padding-right:13px;
+	background-image: url('../images/pin_wesa2.png');
+	padding-right:19px;
 	color: #F2D465;
 }
 
 #region-apac {
 	top: 57%;
 	left: 77%;
-	background-image: url('../images/pin_apac.png');
-	padding-right:13px;
+	background-image: url('../images/pin_apac2.png');
+	padding-right:19px;
 	color: #7E6E97;
 }
 
 #region-eer {
 	top: 22%;
 	left: 62%;
-	background-image: url('../images/pin_eer.png');
-	padding-right:13px;
+	background-image: url('../images/pin_eer2.png');
+	padding-right:19px;
 	color: #CE4F3E;
 }
 
 #region-mena {
 	top: 43%;
 	left: 52%;
-	background-image: url('../images/pin_mena.png');
-	padding-right:13px;
+	background-image: url('../images/pin_mena2.png');
+	padding-right:19px;
 	color: #90B954;
 }
 
 #region-india {
 	top: 46%;
 	left: 65%;
-	background-image: url('../images/pin_india.png');
-	padding-right:13px;
+	background-image: url('../images/pin_india2.png');
+	padding-right:19px;
 	color: #8C8C8C;
 }
 
