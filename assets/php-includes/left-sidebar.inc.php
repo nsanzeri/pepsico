@@ -28,7 +28,7 @@
 				</a></li>
 
 				<li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><div class="gp-clearall" id="region-clear">clear <i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-earth"></i> <span> Region </span> <span class="pull-right"><div class="gp-clearall" id="region-clear">clear<i class="mdi mdi-close-circle-outline"></i></div></i></span></a>
                        				<?php echo buildFilter ( 'region', 'region_id', false ); ?>        
                             </li>
 
