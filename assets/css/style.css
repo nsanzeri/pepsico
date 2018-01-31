@@ -139,6 +139,27 @@ a:focus {
   text-align: center;
   width: 30px;
 }
+
+/* ==============
+  Map Key
+===================*/
+ul.key{
+	text-align:left;
+	margin-top:-10em;
+	color:#747474;
+	list-style-type: none;
+	margin-left:30px;
+}
+
+/*#keyleft{
+	float:left;
+	margin-left:-7em;
+}
+#keyright{
+	float:left;
+	margin-left:-3.5em;
+}*/
+
 /* ==============
   Bootstrap-custom
 ===================*/
@@ -200,6 +221,9 @@ a:focus {
   width:100%;
   text-align:center;
 }
+
+
+
 .breadcrumb {
   background-color: transparent;
   margin-bottom: 15px;
@@ -1491,11 +1515,36 @@ File: Components
   padding-top: 0;
   padding-bottom: 4em;
   background-color: #2a323c;
+  /*background-image: linear-gradient(transparent 0px, transparent 2px, rgb(255, 255, 255) 2px, rgb(255, 255, 255) 20px), linear-gradient(to right, rgb(200, 195, 199) 0px, rgb(200, 195, 199) 2px, rgb(255, 255, 255) 2px, rgb(255, 255, 255) 20px);
+  background-position: -233px -2px;
+  background-size: 20px 20px;
+  min-width: 100%;
+  min-height: 100vh;
+  user-select: none;*/
+
+background-image: 
+    linear-gradient(0deg, transparent 9%, 
+    rgba(255, 255, 255, .04) 10%, rgba(255, 255, 255, .04) 12%, transparent 13%, transparent 29%, 
+    rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .02) 31%, transparent 32%, transparent 49%, 
+    rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .02) 51%, transparent 52%, transparent 69%, 
+    rgba(255, 255, 255, .1) 70%, rgba(255, 255, 255, .02) 71%, transparent 72%, transparent 89%,
+    rgba(255, 255, 255, .1) 90%, rgba(255, 255, 255, .02) 91%, transparent 92%, transparent),
+    linear-gradient(90deg, transparent 9%, 
+    rgba(255, 255, 255, .04) 10%, rgba(255, 255, 255, .04) 12%, transparent 13%, transparent 29%, 
+    rgba(255, 255, 255, .1) 30%, rgba(255, 255, 255, .02) 31%, transparent 32%, transparent 49%, 
+    rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .02) 51%, transparent 52%, transparent 69%, 
+    rgba(255, 255, 255, .1) 70%, rgba(255, 255, 255, .02) 71%, transparent 72%, transparent 89%,
+    rgba(255, 255, 255, .1) 90%, rgba(255, 255, 255, .02) 91%, transparent 92%, transparent);
+  height:100%;
+  background-size:50px 50px;
+  
 }
 .panel .panel-body-white {
   padding-top: 4em;
   padding-bottom: 4em;
   background-color: #ffffff;
+  
+  
 }
 .panel-heading {
   border-radius: 0;
@@ -3122,7 +3171,7 @@ File: Menu
   padding: 0px;
 }
 .search-bar {
-  background-color: rgba(42, 50, 60, 0.1) !important;
+  background-color: rgba(42, 50, 60, 0) !important;
   border: none !important;
   box-shadow: none !important;
   color: #ffffff;

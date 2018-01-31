@@ -14,6 +14,16 @@
 					<img src="assets/images/map-color3.png" alt="Map">
 					<?php echo getRegionCounts(); ?>
 				</div>
+				<ul class="key">
+					<li><font color="#8d7fa3"><b>&#9634</b></font>&nbsp Asia Pacific</li>
+					<li> <font color="#1d698f"><b>&#9634</b></font>&nbsp China</li>
+					<li> <font color="#bf5546"><b>&#9634</b></font>&nbsp Eastern Europe</li>
+					<li> <font color="#a9a9a9"><b>&#9634</b></font>&nbsp India</li>
+					<li> <font color="#e9884f"><b>&#9634</b></font>&nbsp Latin America</li>
+					<li> <font color="#99ba6b"><b>&#9634</b></font>&nbsp Middle East/North Africa</li>
+					<li> <font color="#3ba4d7"><b>&#9634</b></font>&nbsp North America</li>
+					<li> <font color="#f3ca68"><b>&#9634</b></font>&nbsp Western Europe/South Africa</li>
+				</ul>
 			</div>
 		</div>
 	</div>
